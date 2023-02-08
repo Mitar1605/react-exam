@@ -1,0 +1,56 @@
+.home-page-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-page-main .button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  background: #E41E31;
+  transition: 0.2s;
+  text-decoration: none;
+}
+.home-page-main .button:hover {
+  background: #E63861;
+}
+.home-page-main .homepage-main-block {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../assets/images/bgr-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.home-page-main .homepage-main-block .homepage-main-block-background-color {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+.home-page-main .homepage-main-block .homepage-main-block-background-color .homepage-main-block__container {
+  width: 75%;
+}
+.home-page-main .homepage-main-block .homepage-main-block-background-color .homepage-main-block__container .homepage-main-block-content {
+  width: 600px;
+  margin-top: 250px;
+}
+.home-page-main .homepage-main-block .homepage-main-block-background-color .homepage-main-block__container .homepage-main-block-content h1 {
+  font-size: 44px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.home-page-main .homepage-main-block .homepage-main-block-background-color .homepage-main-block__container .homepage-main-block-content p {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+.home-page-main .homepage-main-block .homepage-main-block-background-color .homepage-main-block__container .homepage-main-block-content a {
+  margin-top: 50px;
+}/*# sourceMappingURL=HomePage.css.map */
