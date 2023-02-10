@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer} from 'react'
+import React from 'react'
 import './Catalog.css'
 import ProductBox from '../../components/product/ProductBox'
 import { productsData } from '../../assets/data/productsData'
