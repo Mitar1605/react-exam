@@ -1,5 +1,18 @@
-.catalog-products-block {
+.catalog__main {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F5F5F5;
+}
+.catalog__main .catalog-products-block {
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+.catalog__main .catalog-products-block .loading-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=Catalog.css.map */
