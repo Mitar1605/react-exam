@@ -15,7 +15,7 @@ export default function HomePage() {
               <p>
                 Здоровый праздничный ужин вовсе не обязательно должен состоять из шпината, гречки и вареной куриной грудки.
               </p>
-              <Link className='button'>Перейти в каталог</Link>
+              <Link to='/catalog' className='button'>Перейти в каталог</Link>
             </div>
           </div>
         </div>

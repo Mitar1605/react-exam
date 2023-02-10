@@ -37,20 +37,21 @@
   width: 75%;
 }
 .home-page-main .homepage-main-block .homepage-main-block-background-color .homepage-main-block__container .homepage-main-block-content {
-  width: 600px;
-  margin-top: 250px;
+  width: 800px;
+  margin-top: 400px;
 }
 .home-page-main .homepage-main-block .homepage-main-block-background-color .homepage-main-block__container .homepage-main-block-content h1 {
-  font-size: 44px;
+  font-size: 58px;
   color: #fff;
   font-weight: 400;
   text-transform: uppercase;
 }
 .home-page-main .homepage-main-block .homepage-main-block-background-color .homepage-main-block__container .homepage-main-block-content p {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 25px;
   color: #fff;
 }
 .home-page-main .homepage-main-block .homepage-main-block-background-color .homepage-main-block__container .homepage-main-block-content a {
   margin-top: 50px;
+  font-size: 20px;
 }/*# sourceMappingURL=HomePage.css.map */

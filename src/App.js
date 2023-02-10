@@ -2,6 +2,7 @@ import './App.css';
 import {Routes, Route} from 'react-router-dom'
 import Header from './components/header/Header';
 import HomePage from './pages/homepage/HomePage';
+import Catalog from './pages/catalog/Catalog';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path='/catalog' element={<Catalog />} />
       </Routes>
     </div>
   );

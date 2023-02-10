@@ -8,12 +8,14 @@ export default function Header() {
         <div className="header__container">
             <div className="header__content">
                 <div className="header__content-logo">
-                    <img src={require('../../assets/images/logo.png')} alt="Logo" />
+                    <NavLink to='/'>
+                        <img src={require('../../assets/images/logo.png')} alt="Logo" />
+                    </NavLink>
                 </div>
                 <div className="header__content-navigate">
                     <nav>
                         <ul>
-                            <li><NavLink to="#">Каталог <img src={require('../../assets/icons/arrow-down.png')} alt="arrow-down" /></NavLink></li>
+                            <li><NavLink to="/catalog">Каталог <img src={require('../../assets/icons/arrow-down.png')} alt="arrow-down" /></NavLink></li>
                             <li><NavLink to="#">О нас</NavLink></li>
                             <li><NavLink to="#">Оплата и доставка</NavLink></li>
                             <li><NavLink to="#">Где купить</NavLink></li>
