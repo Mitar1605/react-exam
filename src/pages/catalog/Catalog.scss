@@ -1,18 +1,77 @@
+body{
+    background: #F5F5F5;
+}
 .catalog__main{
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #F5F5F5;
-    .catalog-products-block{
-        width: 80%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 40px;
-        .loading-div{
-            width: 100%;
-            display: flex;
-            justify-content: center;
+    justify-content: center;
+    .catalog-container{
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .catalog__title{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 100px 0 50px;
+          h1{
+              font-size: 54px;
+              font-weight: 400;
+          }
+      }
+      .catalog-search-block{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0;
+        form{
+          display: flex;
+          align-items: center;
+          padding: 10px 20px;
+          background: #fff;
+          input{
+            outline: none;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+          }
+          svg{
+            cursor: pointer;
+            font-size: 22px;
+            color: #000;
+          }
         }
+      }
+
+      .loader-div{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 50px 0;
+          .loader {
+              width: 100px;
+              height: 100px;
+              border: 10px solid #eee;
+              border-radius: 100vw;
+              border-top: 10px solid red;
+              animation: spin 3s linear infinite;
+            }
+            
+            @keyframes spin {
+              0% {
+                rotate: 0deg;
+              }
+              100% {
+                rotate: 360deg;
+              }
+            }
+      }
+      .catalog-products-block{
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 40px;
+      }
     }
 }

@@ -1,5 +1,28 @@
 .product-box{
     width: 100%;
+    .loader-div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 10px solid #eee;
+            border-radius: 100vw;
+            border-top: 10px solid red;
+            animation: spin 3s linear infinite;
+          }
+          
+          @keyframes spin {
+            0% {
+              rotate: 0deg;
+            }
+            100% {
+              rotate: 360deg;
+            }
+          }
+    }
     .product-image{
         width: 100%;
         img{
