@@ -1,6 +1,7 @@
 import React, { useEffect, useReducer, useRef, useState } from 'react'
 import './Catalog.css'
 import ProductBox from '../../components/product/ProductBox'
+import { useSearchParams } from 'react-router-dom'
 import { productsData } from '../../assets/data/productsData'
 import {HiOutlineSearch} from 'react-icons/hi'
 
@@ -53,11 +54,13 @@ export default function Catalog() {
         })
         .catch(err => dispatch({type: 'isError'}))
     }, [])
+
+    const [searchParams, setSearchParams] = useSearchParams()
     
     function onSearch(inputValue) {
         setShowData(data.filter(el => el.title.toLowerCase().includes(inputValue.current.toLowerCase())))
+        setSearchParams({key: inputValue.current})
     }
-    
     
   return (
     <div className='catalog__main'>
