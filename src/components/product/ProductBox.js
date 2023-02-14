@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer} from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './ProductBox.css'
 
 export default function ProductBox({product}) {
@@ -67,7 +67,7 @@ export default function ProductBox({product}) {
             <p>{price}</p>
         </div>
         <div className="product-buttons">
-            <button className='product-button link-button' onClick={() => navigateToProductPage(`/catalog/${product.catalogEn}/${id}/${title}`)}>Подробнее</button>
+            <a className='product-button link-button' href={`/catalog/${product.catalogEn}/${id}/${title}`}>Подробнее</a>
             <button className='product-button shop-button'>В корзину</button>
         </div>
     </div>

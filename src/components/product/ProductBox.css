@@ -63,6 +63,7 @@
   background: #fff;
 }
 .product-box .product-buttons .link-button {
+  text-decoration: none;
   background: #E41E31;
   color: #fff;
 }

@@ -3,7 +3,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: #F1F1F1;
   padding: 20px 0;
 }
 header .header__container {
