@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer, useRef, useState } from 'react'
 import '../Catalog.css'
-import './CatalogKitchen.css'
+import './CatalogCoffee.css'
 import ProductBox from '../../../components/product/ProductBox'
 import { useSearchParams } from 'react-router-dom'
 import { productsData } from '../../../assets/data/productsData'
@@ -46,7 +46,7 @@ export default function CatalogKitchen() {
     useEffect(() => {
         dispatch({type: 'isLoading'})
         const getData = new Promise((resolve) => {
-            return resolve(productsData.filter(el => el.catalogEn === 'catalog-kitchen'))
+            return resolve(productsData.filter(el => el.catalogEn === 'catalog-coffee'))
         })
         getData
         .then(data => {

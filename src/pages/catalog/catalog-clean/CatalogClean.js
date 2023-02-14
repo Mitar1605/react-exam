@@ -1,12 +1,12 @@
 import React, { useEffect, useReducer, useRef, useState } from 'react'
 import '../Catalog.css'
-import './CatalogKitchen.css'
+import './CatalogClean.css'
 import ProductBox from '../../../components/product/ProductBox'
 import { useSearchParams } from 'react-router-dom'
 import { productsData } from '../../../assets/data/productsData'
 import {HiOutlineSearch} from 'react-icons/hi'
 
-export default function CatalogKitchen() {
+export default function CatalogClean() {
 
     const searchInputValue = useRef('')
     
@@ -46,7 +46,7 @@ export default function CatalogKitchen() {
     useEffect(() => {
         dispatch({type: 'isLoading'})
         const getData = new Promise((resolve) => {
-            return resolve(productsData.filter(el => el.catalogEn === 'catalog-kitchen'))
+            return resolve(productsData.filter(el => el.catalogEn === 'catalog-clean'))
         })
         getData
         .then(data => {
