@@ -7,6 +7,7 @@ import CatalogProductPage from './pages/catalog/catalog-product-page/CatalogProd
 import CatalogKitchen from './pages/catalog/catalog-kitchen/CatalogKitchen';
 import CatalogCoffee from './pages/catalog/catalog-coffee/CatalogCoffee';
 import CatalogClean from './pages/catalog/catalog-clean/CatalogClean';
+import CatalogElectronics from './pages/catalog/catalog-electronics/CatalogElectronics';
 import ScrollToTop from './hooks/scrollToTop/ScrollToTop';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='catalog-kitchen' element={<CatalogKitchen />} />
         <Route path='catalog-coffee' element={<CatalogCoffee />} />
         <Route path='catalog-clean' element={<CatalogClean />} />
+        <Route path='catalog-electronics' element={<CatalogElectronics />} />
         <Route path='/catalog/:catalogEn/:productId/:title' element={<CatalogProductPage />} />
       </Routes>
     </div>

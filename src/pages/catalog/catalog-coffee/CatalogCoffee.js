@@ -6,7 +6,7 @@ import { useSearchParams } from 'react-router-dom'
 import { productsData } from '../../../assets/data/productsData'
 import {HiOutlineSearch} from 'react-icons/hi'
 
-export default function CatalogKitchen() {
+export default function CatalogCoffee() {
 
     const searchInputValue = useRef('')
     

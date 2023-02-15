@@ -1,0 +1,34 @@
+.faq-item-block .faq-ul {
+  list-style: none;
+}
+.faq-item-block .faq-ul li {
+  height: 70px;
+  overflow: hidden;
+}
+.faq-item-block .faq-ul li .faq-item-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.faq-item-block .faq-ul li .faq-item-title .faq-close-icon {
+  font-size: 40px;
+  color: red;
+  cursor: pointer;
+}
+.faq-item-block .faq-ul li .faq-item-title svg {
+  font-size: 30px;
+  cursor: pointer;
+}
+.faq-item-block .faq-ul li::before {
+  content: "";
+  display: block;
+  margin: 20px 0;
+  width: 100%;
+  padding-top: 1px;
+  background: #000;
+}
+.faq-item-block .faq-ul li p {
+  width: 70%;
+  font-size: 18px;
+  margin-top: 20px;
+}/*# sourceMappingURL=Faq.css.map */

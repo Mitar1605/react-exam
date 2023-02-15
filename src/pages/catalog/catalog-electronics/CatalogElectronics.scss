@@ -1,0 +1,20 @@
+.catalog-faq-block{
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    .catalog-faq-container{
+        width: 80%;
+        padding: 100px 0;
+        .catalog-faq-title{
+            width: 100%;
+            h1{
+                font-size: 40px;
+                font-weight: 400;
+            }
+        }
+        .catalog-faq-content{
+            padding: 50px 0;
+        }
+    }
+}

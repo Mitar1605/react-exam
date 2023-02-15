@@ -34,6 +34,35 @@ header{
                                 }
                             }
                         }
+                        .header-drop-li{
+                            position: relative;
+                            padding: 15px 0;
+                            .header__drop-ul{
+                                width: 350px;
+                                visibility: hidden;
+                                opacity: 0;
+                                position: absolute;
+                                display: flex;
+                                flex-direction: column;
+                                border-radius: 5px;
+                                list-style: none;
+                                top: 50px;
+                                left: -100px;
+                                background-color: #fff;
+                                transition: .2s;
+                                gap: 0;
+                                a{
+                                    width: 100%;
+                                    padding: 15px 20px;
+                                }
+                                
+                            }
+                            &:hover .header__drop-ul{
+                                visibility: visible;
+                                opacity: 1;
+                            }
+
+                        }
                     }
                 }
             }

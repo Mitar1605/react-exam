@@ -1,0 +1,31 @@
+.faq-item-block{
+    .faq-ul{
+    list-style: none;
+    li{
+        height: 70px;
+        overflow: hidden;
+        .faq-item-title{
+            width: 100%;
+            display: flex ;
+            justify-content: space-between;
+            }
+            svg{
+                font-size: 30px;
+                cursor: pointer;
+            }
+        }
+        &::before{
+            content: "";
+            display: block;
+            margin: 20px 0;
+            width: 100%;
+            padding-top: 1px;
+            background: #000;
+        }
+        p{
+            width: 70%;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    }
+}}

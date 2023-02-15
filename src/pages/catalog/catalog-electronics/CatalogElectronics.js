@@ -1,11 +1,14 @@
 import React, { useEffect, useReducer, useRef, useState } from 'react'
-import './Catalog.css'
-import ProductBox from '../../components/product/ProductBox'
+import '../Catalog.css'
+import './CatalogElectronics.css'
+import ProductBox from '../../../components/product/ProductBox'
 import { useSearchParams } from 'react-router-dom'
-import { productsData } from '../../assets/data/productsData'
+import { productsData } from '../../../assets/data/productsData'
 import {HiOutlineSearch} from 'react-icons/hi'
+import Faq from '../../../components/faq/Faq'
 
-export default function Catalog() {
+
+export default function CatalogElectronics() {
 
     const searchInputValue = useRef('')
     
@@ -45,7 +48,7 @@ export default function Catalog() {
     useEffect(() => {
         dispatch({type: 'isLoading'})
         const getData = new Promise((resolve) => {
-            return resolve(productsData.filter(el => el.catalogEn !== 'catalog-electronics'))
+            return resolve(productsData.filter(el => el.catalogEn === 'catalog-electronics'))
         })
         getData
         .then(data => {
@@ -96,7 +99,22 @@ export default function Catalog() {
                     })
                 }
             </div>
+
         </div>
+            <div className="catalog-faq-block">
+                <div className="catalog-faq-container">
+                    <div className="catalog-faq-title">
+                        <h1>FAQ</h1>
+                    </div>
+                    <div className="catalog-faq-content">
+                        <Faq num={1} />
+                        <Faq num={2} />
+                        <Faq num={3} />
+                        <Faq num={4} />
+                        <Faq num={5} />
+                    </div>
+                </div>
+            </div>
     </div>
   )
 }

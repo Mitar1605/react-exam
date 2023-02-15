@@ -91,5 +91,65 @@ export const productsData = [
         catalogEn: 'catalog-coffee',
         thumbnail: 'img-9.png',
         count: 0
-    }
+    },
+    {
+        id: 10,
+        title: 'Кофемашина 1',
+        lessDescr: 'Краткое описание при необходимости',
+        price: '45 670 ₽',
+        catalog: 'SATE Electronics',
+        catalogEn: 'catalog-electronics',
+        thumbnail: 'img-10.png',
+        count: 0
+    },
+    {
+        id: 11,
+        title: 'Кофемашина 2',
+        lessDescr: 'Краткое описание при необходимости',
+        price: '39 870 ₽',
+        catalog: 'SATE Electronics',
+        catalogEn: 'catalog-electronics',
+        thumbnail: 'img-11.png',
+        count: 0
+    },
+    {
+        id: 12,
+        title: 'Кофемашина 3',
+        lessDescr: 'Краткое описание при необходимости',
+        price: '64 500 ₽',
+        catalog: 'SATE Electronics',
+        catalogEn: 'catalog-electronics',
+        thumbnail: 'img-12.png',
+        count: 0
+    },    
+    {
+        id: 13,
+        title: 'Кофемашина 1',
+        lessDescr: 'Краткое описание при необходимости',
+        price: '45 670 ₽',
+        catalog: 'SATE Electronics',
+        catalogEn: 'catalog-electronics',
+        thumbnail: 'img-13.png',
+        count: 0
+    },
+    {
+        id: 14,
+        title: 'Кофемашина 2',
+        lessDescr: 'Краткое описание при необходимости',
+        price: '39 870 ₽',
+        catalog: 'SATE Electronics',
+        catalogEn: 'catalog-electronics',
+        thumbnail: 'img-14.png',
+        count: 0
+    },
+    {
+        id: 15,
+        title: 'Кофемашина 3',
+        lessDescr: 'Краткое описание при необходимости',
+        price: '64 500 ₽',
+        catalog: 'SATE Electronics',
+        catalogEn: 'catalog-electronics',
+        thumbnail: 'img-15.png',
+        count: 0
+    },
 ]
