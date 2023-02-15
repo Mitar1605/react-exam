@@ -54,4 +54,112 @@
 .home-page-main .homepage-main-block .homepage-main-block-background-color .homepage-main-block__container .homepage-main-block-content a {
   margin-top: 50px;
   font-size: 20px;
+}
+.home-page-main .homepage-second-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+.home-page-main .homepage-second-block .second-block-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.home-page-main .homepage-second-block .second-block-container .second-block {
+  padding: 70px 0;
+  max-width: 250px;
+}
+.home-page-main .homepage-second-block .second-block-container .second-block h1 {
+  font-size: 68px;
+  font-weight: 400;
+}
+.home-page-main .homepage-second-block .second-block-container .second-block p {
+  margin-top: 20px;
+}
+.home-page-main .homepage-third-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background: #F5F5F5;
+}
+.home-page-main .homepage-third-block .third-block-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+.home-page-main .homepage-third-block .third-block-container .third-block-item {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-page-main .homepage-third-block .third-block-container .third-block-item-1 {
+  background-image: url(../../assets/images/homepage-img-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.home-page-main .homepage-third-block .third-block-container .third-block-item-2 {
+  background-image: url(../../assets/images/homepage-img-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.home-page-main .homepage-third-block .third-block-container .third-block-item-3 {
+  background-image: url(../../assets/images/homepage-img-3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.home-page-main .homepage-third-block .third-block-container .third-block-item-4 {
+  background-image: url(../../assets/images/homepage-img-4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.home-page-main .homepage-fourth-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 100px 0;
+}
+.home-page-main .homepage-fourth-block .third-block-container {
+  width: 80%;
+  height: 440px;
+  background-image: url(../../assets/images/homepage-background-1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+}
+.home-page-main .homepage-fourth-block .third-block-container .third-block-content {
+  padding-top: 70px;
+  padding-left: 100px;
+  width: 550px;
+}
+.home-page-main .homepage-fourth-block .third-block-container .third-block-content h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+.home-page-main .homepage-fourth-block .third-block-container .third-block-content p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.home-page-main .homepage-fourth-block .third-block-container .third-block-content button {
+  margin-top: 20px;
+  font-size: 17px;
 }/*# sourceMappingURL=HomePage.css.map */
