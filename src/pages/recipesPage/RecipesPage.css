@@ -1,0 +1,58 @@
+.recipes-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recipes-main .recipes-tool-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 0;
+}
+.recipes-main .recipes-tool-block .recipes-tool-container ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.recipes-main .recipes-tool-block .recipes-tool-container ul li {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #E41E31;
+  border-radius: 10px;
+  color: #000;
+  cursor: pointer;
+}
+.recipes-main .recipes-tool-block .recipes-tool-container ul .active {
+  background: #E41E31;
+  color: #fff;
+}
+.recipes-main .loader-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+.recipes-main .loader-div .loader {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #eee;
+  border-radius: 100vw;
+  border-top: 10px solid red;
+  animation: spin 3s linear infinite;
+}
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+.recipes-main .recipes-block {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  padding: 100px 0;
+}/*# sourceMappingURL=RecipesPage.css.map */

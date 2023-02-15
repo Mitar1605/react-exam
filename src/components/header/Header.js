@@ -27,7 +27,7 @@ export default function Header() {
                               <li><NavLink to="#">Оплата и доставка</NavLink></li>
                               <li><NavLink to="#">Где купить</NavLink></li>
                               <li><NavLink to="#">Сервис</NavLink></li>
-                              <li><NavLink to="#">Советы и рецепты</NavLink></li>
+                              <li><NavLink to="Tips&Recipes">Советы и рецепты</NavLink></li>
                           </ul>
                       </nav>
                   </div>

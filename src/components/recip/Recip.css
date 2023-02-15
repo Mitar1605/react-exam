@@ -1,0 +1,18 @@
+.recip-box {
+  background: #F5F5F5;
+}
+.recip-box .recip-img img {
+  width: 100%;
+}
+.recip-box .recip-title {
+  padding: 10px 20px 0;
+}
+.recip-box .recip-title p {
+  font-size: 20px;
+}
+.recip-box .recip-descr {
+  padding: 10px 20px;
+}
+.recip-box .recip-descr span {
+  font-size: 18px;
+}/*# sourceMappingURL=Recip.css.map */
