@@ -41,16 +41,16 @@ export default function HomePage() {
       <div className="homepage-third-block">
         <div className="third-block-container">
           <div className="third-block-item third-block-item-1">
-            <img src={require('../../assets/images/homepagecard-logo.png')} a lt="logo" />
+            <img src={require('../../assets/images/homepagecard-logo.png')} alt="logo" />
           </div>
           <div className="third-block-item third-block-item-2">
-            <img src={require('../../assets/images/homepagecard-logo.png')} a lt="logo" />
+            <img src={require('../../assets/images/homepagecard-logo.png')} alt="logo" />
           </div>
           <div className="third-block-item third-block-item-3">
-            <img src={require('../../assets/images/homepagecard-logo.png')} a lt="logo" />
+            <img src={require('../../assets/images/homepagecard-logo.png')} alt="logo" />
           </div>
           <div className="third-block-item third-block-item-4">
-            <img src={require('../../assets/images/homepagecard-logo.png')} a lt="logo" />
+            <img src={require('../../assets/images/homepagecard-logo.png')} alt="logo" />
           </div>
         </div>
       </div>
