@@ -12,6 +12,7 @@ export default function CartItem({product, deleteItem, setItogo}) {
         product.count = calcCount
         product.paditog = +price * calcCount
         setItogo(cartData.reduce((aggr, el) => aggr + el.paditog, 0))
+        if (calcCount < 1) deleteItem(id)
     }, [cartData, calcCount])
     
 
@@ -21,7 +22,6 @@ export default function CartItem({product, deleteItem, setItogo}) {
     
     const minusCount = () => {
         setCalcCount(() => calcCount - 1)
-        if (calcCount < 2) deleteItem(id)
     }
 
     
