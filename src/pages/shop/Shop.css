@@ -87,4 +87,27 @@ h1 {
 }
 .shop-main .shop-content .shop-content-container tbody tr .title-td {
   width: 550px;
+}
+.shop-main .shop-content .shop-content-container .shop-buy .shop-buy-itog {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.shop-main .shop-content .shop-content-container .shop-buy .shop-buy-itog h1 {
+  font-weight: 400;
+}
+.shop-main .shop-content .shop-content-container .shop-buy .shop-buy-button button {
+  padding: 25px 80px;
+  background: #E41E31;
+  font-size: 22px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.shop-main .shop-content .shop-content-container .shop-buy .shop-buy-button button:hover {
+  background: #E63861;
 }/*# sourceMappingURL=Shop.css.map */

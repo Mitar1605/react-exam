@@ -12,8 +12,6 @@ export default function CartItem({product, deleteItem, setItogo}) {
         product.count = calcCount
         product.paditog = +price * calcCount
         setItogo(cartData.reduce((aggr, el) => aggr + el.paditog, 0))
-
-        console.log(cartData);
     }, [cartData, calcCount])
     
 

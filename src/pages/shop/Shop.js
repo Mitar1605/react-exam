@@ -50,8 +50,11 @@ export default function Shop() {
                         <h1>СУММА ЗАКАЗОВ</h1>
                     </div>
                     <div className="shop-buy-itog">
-                        <h3>Итого</h3>
-                        <h2>{itogo}</h2>
+                        <h1>Итого</h1>
+                        <h1>{itogo} ₽</h1>
+                    </div>
+                    <div className="shop-buy-button">
+                        <button>Оформить заказ</button>
                     </div>
                 </div>
             </div>
