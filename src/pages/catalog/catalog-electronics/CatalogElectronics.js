@@ -2,7 +2,7 @@ import React, { useEffect, useReducer, useRef, useState } from 'react'
 import '../Catalog.css'
 import './CatalogElectronics.css'
 import ProductBox from '../../../components/product/ProductBox'
-import { useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { productsData } from '../../../assets/data/productsData'
 import {HiOutlineSearch} from 'react-icons/hi'
 import Faq from '../../../components/faq/Faq'
@@ -67,10 +67,12 @@ export default function CatalogElectronics() {
     
   return (
     <div className='catalog__main'>
+        <div className="catalog-banner-catalogs catalog-electrnoics-banner">
+            <span><Link to='/catalog'>Каталог</Link> / <Link className='second-link-banner' to='/catalog-electronics'>SATE Electronics</Link></span>
+            <h1>SATE Electronics</h1>
+            <p>Здоровый праздничный ужин вовсе не обязательно должен состоять из шпината, гречки и вареной куриной грудки.</p>
+        </div>
         <div className="catalog-container">
-            <div className="catalog__title">
-                <h1>КАТАЛОГ ПРОДУКЦИИ</h1>
-            </div>
             <div className="catalog-search-block">
                 <span>Фильтр</span>
                 <form onSubmit={(e) => {

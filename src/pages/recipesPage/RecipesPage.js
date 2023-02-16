@@ -1,5 +1,6 @@
 import React, { useReducer, useEffect, useRef} from 'react'
 import './RecipesPage.css'
+import { Link } from 'react-router-dom'
 import { recipesData } from '../../assets/data/recipesData'
 import Recip from '../../components/recip/Recip'
 
@@ -67,6 +68,14 @@ export default function RecipesPage() {
 
   return (
     <div className='recipes-main'>
+        <div className="recipes-banner">
+            <div className="recipes-banner-content">
+                <span><Link to='/catalog'>Каталог</Link> / <Link className='second-banner-link' to='/Tips&Recipes'>Советы и рецепты</Link></span>
+                <h1>Советы и рецепты</h1>
+                <p>Здоровый праздничный ужин вовсе не обязательно должен состоять из шпината, гречки и вареной куриной грудки. Самыми лучшими способами приготовления еды являются следующие: варка на пару, запекание или варка в воде.</p>
+            </div>
+            <img src={require('../../assets/images/recipes-banner-img.png')} alt="banner img" />
+        </div>
         <div className="recipes-tool-block">
             <div className="recipes-tool-container">
                 <ul>

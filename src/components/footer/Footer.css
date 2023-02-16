@@ -50,6 +50,8 @@ footer .footer-container .footer-content .footer-navigate .footer-navigate-item 
 }
 footer .footer-container .footer-content .footer-navigate .footer-navigate-item ul li {
   padding: 10px 0;
+  display: flex;
+  align-items: center;
 }
 footer .footer-container .footer-content .footer-navigate .footer-navigate-item ul li a {
   text-decoration: none;
@@ -58,6 +60,9 @@ footer .footer-container .footer-content .footer-navigate .footer-navigate-item 
 }
 footer .footer-container .footer-content .footer-navigate .footer-navigate-item ul li a:hover {
   opacity: 0.7;
+}
+footer .footer-container .footer-content .footer-navigate .footer-navigate-item ul li svg {
+  margin-left: 5px;
 }
 footer .footer-container .footer-content .footer-social .footer-social-img {
   margin-right: 20px;

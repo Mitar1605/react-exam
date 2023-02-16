@@ -2,11 +2,79 @@ body {
   background: #F5F5F5;
 }
 
+.catalog-banner-catalogs {
+  width: 100%;
+  height: 400px;
+  background-image: url(../../assets/images/catalog-kithcen-banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 10% 0;
+}
+.catalog-banner-catalogs span {
+  color: #fff;
+}
+.catalog-banner-catalogs span a {
+  text-decoration: none;
+  color: #fff;
+}
+.catalog-banner-catalogs span .second-link-banner {
+  color: #E41E31;
+}
+.catalog-banner-catalogs h1 {
+  font-size: 48px;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 80px;
+}
+.catalog-banner-catalogs p {
+  width: 600px;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  background: #E41E31;
+  transition: 0.2s;
+  text-decoration: none;
+}
+.button:hover {
+  background: #E63861;
+}
+
 .catalog__main {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.catalog__main .catalog-banner {
+  width: 100%;
+  height: 650px;
+  background-image: url(../../assets/images/ctalog-banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+.catalog__main .catalog-banner p {
+  font-size: 38px;
+  font-weight: 400;
+  color: #fff;
+}
+.catalog__main .catalog-banner button {
+  margin-top: 30px;
 }
 .catalog__main .catalog-container {
   width: 80%;

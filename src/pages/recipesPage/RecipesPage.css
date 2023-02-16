@@ -4,6 +4,42 @@
   flex-direction: column;
   align-items: center;
 }
+.recipes-main .recipes-banner {
+  width: 100%;
+  height: 500px;
+  background-image: url(../../assets/images/recipes-banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 15% 0 10%;
+}
+.recipes-main .recipes-banner span {
+  color: #fff;
+}
+.recipes-main .recipes-banner span a {
+  text-decoration: none;
+  color: #fff;
+}
+.recipes-main .recipes-banner span .second-banner-link {
+  color: #E41E31;
+}
+.recipes-main .recipes-banner h1 {
+  font-size: 48px;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 100px;
+}
+.recipes-main .recipes-banner p {
+  margin-top: 30px;
+  width: 600px;
+  font-size: 18px;
+  color: #fff;
+}
+.recipes-main .recipes-banner img {
+  width: 450px;
+}
 .recipes-main .recipes-tool-block {
   width: 100%;
   display: flex;

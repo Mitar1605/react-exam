@@ -64,6 +64,11 @@ export default function Catalog() {
     
   return (
     <div className='catalog__main'>
+        <div className="catalog-banner">
+            <img src={require('../../assets/images/catalog-banner-img.png')} alt="banner img" />
+            <p>КАКОЙ-ТО ПРОМО БАННЕР <br /> НОВИНКИ ИЛИ АКЦИИ</p>
+            <button className='button'>Узнать подробнее</button>
+        </div>
         <div className="catalog-container">
             <div className="catalog__title">
                 <h1>КАТАЛОГ ПРОДУКЦИИ</h1>

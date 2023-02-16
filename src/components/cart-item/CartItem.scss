@@ -1,0 +1,36 @@
+td{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    svg{
+        font-size: 24px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    img{
+        width: 150px;
+        margin-right: 20px;
+    }
+    input{
+        width: 50px;
+        height: 45px;
+        font-size: 24px;
+        text-align: center;
+    }
+    .button{
+        display: inline-block;
+        cursor: pointer;
+        height: 45px;
+        padding: 10px;
+        border: none;
+        border-radius: 0;
+        color: #fff;
+        background: #E41E31;
+        transition: .2s;
+        text-decoration: none;
+      
+        &:hover{
+            background: #E63861;
+        }
+      } 
+}

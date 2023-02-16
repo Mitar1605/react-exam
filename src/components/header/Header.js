@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 import {NavLink} from 'react-router-dom'
+import {AiOutlineShoppingCart} from 'react-icons/ai'
 
 export default function Header() {
   return (
@@ -23,9 +24,8 @@ export default function Header() {
                                         <li className="header__nav-ul-li header__nav-drop-ul-li"><NavLink to="/catalog-clean" className={"header__nav-ul-li-a"}>SATE Чистый дом</NavLink></li>
                                     </ul>
                                 </li>
-                              <li><NavLink to="#">О нас</NavLink></li>
+                              <li><NavLink to="/shop">Корзина</NavLink><AiOutlineShoppingCart /></li>
                               <li><NavLink to="#">Оплата и доставка</NavLink></li>
-                              <li><NavLink to="#">Где купить</NavLink></li>
                               <li><NavLink to="#">Сервис</NavLink></li>
                               <li><NavLink to="/Tips&Recipes">Советы и рецепты</NavLink></li>
                           </ul>

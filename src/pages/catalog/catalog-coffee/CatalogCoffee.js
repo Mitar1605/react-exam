@@ -2,7 +2,7 @@ import React, { useEffect, useReducer, useRef, useState } from 'react'
 import '../Catalog.css'
 import './CatalogCoffee.css'
 import ProductBox from '../../../components/product/ProductBox'
-import { useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { productsData } from '../../../assets/data/productsData'
 import {HiOutlineSearch} from 'react-icons/hi'
 
@@ -65,10 +65,12 @@ export default function CatalogCoffee() {
     
   return (
     <div className='catalog__main'>
+        <div className="catalog-banner-catalogs">
+            <span><Link to='/catalog'>Каталог</Link> / <Link className='second-link-banner' to='/catalog-coffee'>SATE Кофейное удовольствие</Link></span>
+            <h1>SATE Кофейное удовольствие</h1>
+            <p>Здоровый праздничный ужин вовсе не обязательно должен состоять из шпината, гречки и вареной куриной грудки.</p>
+        </div>
         <div className="catalog-container">
-            <div className="catalog__title">
-                <h1>КАТАЛОГ ПРОДУКЦИИ</h1>
-            </div>
             <div className="catalog-search-block">
                 <span>Фильтр</span>
                 <form onSubmit={(e) => {

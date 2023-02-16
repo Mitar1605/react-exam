@@ -1,12 +1,14 @@
-import React, {useReducer, useEffect} from 'react'
+import React, {useContext, useState, useReducer, useEffect} from 'react'
 import './CatalogProductPage.css'
+import { CartDataContext } from '../../../App'
 import { productsData } from '../../../assets/data/productsData'
 import { Link, useParams } from 'react-router-dom'
 import ProductBox from '../../../components/product/ProductBox'
 
 
 export default function CatalogProductPage() {
-
+    const {cartData, setCartData} = useContext(CartDataContext)
+    const [addCart, setAddCart] = useState(false)
     const {productId} = useParams()
 
     const initialProductState = {
@@ -52,6 +54,26 @@ export default function CatalogProductPage() {
         .catch(err => dispatch({type: 'isError'}))
     }, [])
 
+    const addToCart = () => {
+
+        const initialItem = cartData.find(el => el.id === id)
+        if (!initialItem) {            
+            setCartData([
+                ...cartData,
+                {
+                    id: id,
+                    title: title,
+                    thumbnail: thumbnail,
+                    lessDescr: lessDescr,
+                    price: price.slice(0, price.indexOf('₽') - 1).replace(' ', ''),
+                    count: 1 
+                }]
+            )
+            setAddCart(true)
+        }
+        
+    }
+
   return (
       <div className='product-page__main'>
           <div className="product-page__product">
@@ -75,7 +97,7 @@ export default function CatalogProductPage() {
                                           <span>{price}</span>
                                       </div>
                                       <div className="product-description-recycle">
-                                          <button>В корзину</button>
+                                          <button onClick={addToCart}>{!addCart ? 'В корзину': 'Добавлена в карзину'}</button>
                                       </div>
                                       <div className="product-description-descr">
                                           <ul>
