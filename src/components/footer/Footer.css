@@ -5,6 +5,11 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 1366px) {
+  footer {
+    height: auto;
+  }
+}
 footer .footer-container {
   width: 80%;
   display: flex;
@@ -18,6 +23,22 @@ footer .footer-container .footer-content {
   padding: 100px 0;
   color: #fff;
   font-size: 18px;
+}
+@media (max-width: 1366px) {
+  footer .footer-container .footer-content {
+    font-size: 14px;
+  }
+}
+@media (max-width: 840px) {
+  footer .footer-container .footer-content {
+    font-size: 12px;
+  }
+}
+@media (max-width: 460px) {
+  footer .footer-container .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 footer .footer-container .footer-content .footer-address p {
   margin-top: 20px;
@@ -36,34 +57,90 @@ footer .footer-container .footer-content .footer-address a {
 footer .footer-container .footer-content .footer-address a:hover {
   opacity: 0.7;
 }
-footer .footer-container .footer-content .footer-navigate {
+@media (max-width: 460px) {
+  footer .footer-container .footer-content .footer-navigate-main {
+    margin-top: 50px;
+  }
+}
+footer .footer-container .footer-content .footer-navigate-main .footer-navigate {
   font-size: 18px;
   display: flex;
   gap: 100px;
 }
-footer .footer-container .footer-content .footer-navigate .footer-navigate-item h4 {
+@media (max-width: 840px) {
+  footer .footer-container .footer-content .footer-navigate-main .footer-navigate {
+    font-size: 14px;
+    gap: 10px;
+  }
+}
+@media (max-width: 460px) {
+  footer .footer-container .footer-content .footer-navigate-main .footer-navigate {
+    gap: 50px;
+  }
+}
+@media (max-width: 412px) {
+  footer .footer-container .footer-content .footer-navigate-main .footer-navigate {
+    gap: 25px;
+  }
+}
+@media (max-width: 320px) {
+  footer .footer-container .footer-content .footer-navigate-main .footer-navigate {
+    gap: 0;
+  }
+}
+@media (max-width: 1366px) {
+  footer .footer-container .footer-content .footer-navigate-main .footer-navigate .footer-navigate-item {
+    font-size: 14px;
+  }
+}
+@media (max-width: 840px) {
+  footer .footer-container .footer-content .footer-navigate-main .footer-navigate .footer-navigate-item {
+    font-size: 12px;
+  }
+}
+footer .footer-container .footer-content .footer-navigate-main .footer-navigate .footer-navigate-item h4 {
   color: #686868;
 }
-footer .footer-container .footer-content .footer-navigate .footer-navigate-item ul {
+footer .footer-container .footer-content .footer-navigate-main .footer-navigate .footer-navigate-item ul {
   margin-top: 20px;
   list-style: none;
 }
-footer .footer-container .footer-content .footer-navigate .footer-navigate-item ul li {
+footer .footer-container .footer-content .footer-navigate-main .footer-navigate .footer-navigate-item ul li {
   padding: 10px 0;
   display: flex;
   align-items: center;
 }
-footer .footer-container .footer-content .footer-navigate .footer-navigate-item ul li a {
+footer .footer-container .footer-content .footer-navigate-main .footer-navigate .footer-navigate-item ul li a {
   text-decoration: none;
   color: #fff;
   transition: 0.2s;
 }
-footer .footer-container .footer-content .footer-navigate .footer-navigate-item ul li a:hover {
+footer .footer-container .footer-content .footer-navigate-main .footer-navigate .footer-navigate-item ul li a:hover {
   opacity: 0.7;
 }
-footer .footer-container .footer-content .footer-navigate .footer-navigate-item ul li svg {
+footer .footer-container .footer-content .footer-navigate-main .footer-navigate .footer-navigate-item ul li svg {
   margin-left: 5px;
 }
-footer .footer-container .footer-content .footer-social .footer-social-img {
+@media (max-width: 460px) {
+  footer .footer-container .footer-content .footer-navigate-main .footer-social {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1366px) {
+  footer .footer-container .footer-content .footer-navigate-main .footer-social img {
+    width: 24px;
+  }
+}
+@media (max-width: 840px) {
+  footer .footer-container .footer-content .footer-navigate-main .footer-social img {
+    width: 18px;
+  }
+}
+@media (max-width: 460px) {
+  footer .footer-container .footer-content .footer-navigate-main .footer-social img {
+    width: 24px;
+  }
+}
+footer .footer-container .footer-content .footer-navigate-main .footer-social .footer-social-img {
   margin-right: 20px;
 }/*# sourceMappingURL=Footer.css.map */

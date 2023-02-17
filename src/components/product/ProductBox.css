@@ -1,6 +1,11 @@
 .product-box {
   width: 100%;
 }
+@media (max-width: 1366px) {
+  .product-box {
+    width: 90%;
+  }
+}
 .product-box .loader-div {
   width: 100%;
   display: flex;
@@ -36,11 +41,37 @@
   font-size: 22px;
   font-weight: 600px;
 }
+@media (max-width: 1366px) {
+  .product-box .product-title p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .product-box .product-title p {
+    font-size: 13px;
+  }
+}
 .product-box .product-descr {
   padding: 22px 0;
 }
+@media (max-width: 1366px) {
+  .product-box .product-descr {
+    font-size: 16px;
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .product-box .product-descr {
+    font-size: 13px;
+  }
+}
 .product-box .product-descr span {
   font-size: 18px;
+}
+@media (max-width: 1366px) {
+  .product-box .product-descr span {
+    font-size: 14px;
+  }
 }
 .product-box .product-price {
   padding: 20px 0;
@@ -48,10 +79,25 @@
 .product-box .product-price p {
   font-size: 26px;
 }
+@media (max-width: 1366px) {
+  .product-box .product-price p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .product-box .product-price p {
+    font-size: 16px;
+  }
+}
 .product-box .product-buttons {
   display: flex;
   gap: 20px;
   padding: 20px 0;
+}
+@media (max-width: 768px) {
+  .product-box .product-buttons {
+    padding: 10px 0;
+  }
 }
 .product-box .product-buttons .product-button {
   border: 1px solid #E41E31;
@@ -61,6 +107,30 @@
   border-radius: 7px;
   transition: 0.2s;
   background: #fff;
+}
+@media (max-width: 1366px) {
+  .product-box .product-buttons .product-button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 1150px) {
+  .product-box .product-buttons .product-button {
+    padding: 10px 15px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .product-box .product-buttons .product-button {
+    padding: 5px 10px;
+    font-size: 8px;
+  }
+}
+@media (max-width: 412px) {
+  .product-box .product-buttons .product-button {
+    padding: 10px 20px;
+    font-size: 10px;
+  }
 }
 .product-box .product-buttons .link-button {
   text-decoration: none;

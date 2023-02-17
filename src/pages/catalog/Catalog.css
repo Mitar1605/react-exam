@@ -11,6 +11,20 @@ body {
   background-size: cover;
   padding: 50px 10% 0;
 }
+@media (max-width: 1366px) {
+  .catalog-banner-catalogs {
+    height: 320px;
+  }
+}
+@media (max-width: 460px) {
+  .catalog-banner-catalogs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+  }
+}
 .catalog-banner-catalogs span {
   color: #fff;
 }
@@ -21,17 +35,50 @@ body {
 .catalog-banner-catalogs span .second-link-banner {
   color: #E41E31;
 }
+@media (max-width: 1366px) {
+  .catalog-banner-catalogs span {
+    font-size: 14px;
+  }
+}
 .catalog-banner-catalogs h1 {
   font-size: 48px;
   color: #fff;
   font-weight: 400;
   margin-top: 80px;
 }
+@media (max-width: 1366px) {
+  .catalog-banner-catalogs h1 {
+    font-size: 34px;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 320px) {
+  .catalog-banner-catalogs h1 {
+    font-size: 28px;
+  }
+}
 .catalog-banner-catalogs p {
   width: 600px;
   font-size: 18px;
   color: #fff;
   margin-top: 20px;
+}
+@media (max-width: 1366px) {
+  .catalog-banner-catalogs p {
+    width: 450px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 460px) {
+  .catalog-banner-catalogs p {
+    width: 350px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .catalog-banner-catalogs p {
+    width: 250px;
+  }
 }
 
 .button {
@@ -68,13 +115,68 @@ body {
   text-align: center;
   padding-top: 100px;
 }
+@media (max-width: 1600px) {
+  .catalog__main .catalog-banner {
+    padding-top: 50px;
+    height: 550px;
+  }
+}
+@media (max-width: 1366px) {
+  .catalog__main .catalog-banner {
+    padding-top: 0;
+    height: 450px;
+  }
+}
+@media (max-width: 1600px) {
+  .catalog__main .catalog-banner img {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 1366px) {
+  .catalog__main .catalog-banner img {
+    transform: scale(0.7);
+    height: 60%;
+  }
+}
+@media (max-width: 840px) {
+  .catalog__main .catalog-banner img {
+    transform: scale(0.5);
+  }
+}
+@media (max-width: 320px) {
+  .catalog__main .catalog-banner img {
+    transform: scale(0.5);
+    height: 50%;
+  }
+}
 .catalog__main .catalog-banner p {
   font-size: 38px;
   font-weight: 400;
   color: #fff;
 }
+@media (max-width: 1600px) {
+  .catalog__main .catalog-banner p {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1366px) {
+  .catalog__main .catalog-banner p {
+    font-size: 28px;
+  }
+}
+@media (max-width: 840px) {
+  .catalog__main .catalog-banner p {
+    font-size: 22px;
+  }
+}
 .catalog__main .catalog-banner button {
   margin-top: 30px;
+}
+@media (max-width: 840px) {
+  .catalog__main .catalog-banner button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
 }
 .catalog__main .catalog-container {
   width: 80%;
@@ -86,11 +188,36 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 100px 0 50px;
+  padding: 100px 0;
+}
+@media (max-width: 1366px) {
+  .catalog__main .catalog-container .catalog__title {
+    padding: 50px 0;
+  }
 }
 .catalog__main .catalog-container .catalog__title h1 {
   font-size: 54px;
   font-weight: 400;
+}
+@media (max-width: 1366px) {
+  .catalog__main .catalog-container .catalog__title h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .catalog__main .catalog-container .catalog__title h1 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 460px) {
+  .catalog__main .catalog-container .catalog__title h1 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 320px) {
+  .catalog__main .catalog-container .catalog__title h1 {
+    font-size: 20px;
+  }
 }
 .catalog__main .catalog-container .catalog-search-block {
   width: 100%;
@@ -104,16 +231,31 @@ body {
   padding: 10px 20px;
   background: #fff;
 }
+@media (max-width: 1366px) {
+  .catalog__main .catalog-container .catalog-search-block form {
+    padding: 7px 10px;
+  }
+}
 .catalog__main .catalog-container .catalog-search-block form input {
   outline: none;
   border: none;
   font-size: 18px;
   border-radius: 5px;
 }
+@media (max-width: 1366px) {
+  .catalog__main .catalog-container .catalog-search-block form input {
+    font-size: 14px;
+  }
+}
 .catalog__main .catalog-container .catalog-search-block form svg {
   cursor: pointer;
   font-size: 22px;
   color: #000;
+}
+@media (max-width: 1366px) {
+  .catalog__main .catalog-container .catalog-search-block form svg {
+    font-size: 14px;
+  }
 }
 .catalog__main .catalog-container .loader-div {
   width: 100%;
@@ -143,4 +285,17 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   padding-bottom: 100px;
+}
+@media (max-width: 460px) {
+  .catalog__main .catalog-container .catalog-products-block {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 412px) {
+  .catalog__main .catalog-container .catalog-products-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=Catalog.css.map */

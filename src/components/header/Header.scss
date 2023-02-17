@@ -85,6 +85,7 @@ header{
                                 background-color: #fff;
                                 transition: .2s;
                                 gap: 0;
+                                z-index: 100;
 
                                 @include desktop_xl{
                                     width: 250px;

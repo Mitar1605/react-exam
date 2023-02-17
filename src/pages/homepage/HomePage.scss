@@ -278,12 +278,30 @@
             @include desktop_l{
                 height: 350px;
             }
+            @include mobile_lg{
+                position: relative;
+            }
             .third-block-content{
                 padding-top: 70px;
                 padding-left: 100px;
                 width: 550px;
+                z-index: 1;
                 @include desktop_l{
                     width: 380px;
+                }
+                @include tablet_md{
+                    padding-left: 50px;
+                }
+                @include tablet_xs{
+                    width: 240px;
+                }
+                @include mobile_xs{
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0;
+                    padding-top: 50px;
                 }
                 h1{
                     font-size: 36px;
@@ -291,6 +309,13 @@
                     @include desktop_l{
                         font-size: 24px;
                     }
+                    @include tablet_md{
+                        font-size: 20px;
+                    }
+                    @include tablet_xs{
+                        font-size: 16px;
+                    }
+                    
                 }
                 p{
                     font-size: 18px;
@@ -299,6 +324,20 @@
                         width: 450px;
                         font-size: 14px;
                     }
+                    @include tablet_md{
+                        width: 400px;
+                        font-size: 12px;
+                    }
+                    @include tablet_xs{
+                        font-size: 10px;
+                        width: 300px;
+                    }
+                    @include mobile_md{
+                        width: 250px;
+                    }
+                    @include mobile_xs{
+                        width: 150px;
+                    }
                 }
                 button{
                     margin-top: 20px;
@@ -306,6 +345,31 @@
                     @include desktop_l{
                         font-size: 14px;
                     }
+                    @include tablet_md{
+                        font-size: 12px;
+                    }
+                    @include tablet_xs{
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            img{
+                z-index: 0;
+                @include desktop_lg{
+                    width: 50%;
+                }
+                @include tablet_md{
+                    width: 40%;
+                }
+                @include tablet_xs{
+                    width: 50%;
+                }
+                @include mobile_lg{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    right: 0;
                 }
             }
         }

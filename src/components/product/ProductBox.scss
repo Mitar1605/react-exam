@@ -1,5 +1,10 @@
+@import '../../breakpoints/Breakpoints.scss';
+
 .product-box{
     width: 100%;
+    @include desktop_l{
+        width: 90%;
+    }
     .loader-div{
         width: 100%;
         display: flex;
@@ -34,25 +39,49 @@
         p{
             font-size: 22px;
             font-weight: 600px;
+            @include desktop_l{
+                font-size: 16px;
+            }
+            @include tablet_xs{
+                font-size: 13px;
+            }
         }
     }
     .product-descr{
         padding: 22px 0;
+        @include desktop_l{
+            font-size: 16px;
+            padding: 0;
+        }
+        @include tablet_xs{
+            font-size: 13px;
+        }
         span{
             font-size: 18px;
+            @include desktop_l{
+                font-size: 14px;
+            }
         }
     }
     .product-price{
         padding: 20px 0;
         p{
             font-size: 26px;
-
+            @include desktop_l{
+                font-size: 18px;
+            }
+            @include tablet_xs{
+                font-size: 16px;
+            }
         }
     }
     .product-buttons{
         display: flex;
         gap: 20px;
         padding: 20px 0;
+        @include tablet_xs{
+            padding: 10px 0;
+        }
         .product-button{
             border: 1px solid #E41E31;
             padding: 15px 30px;
@@ -61,6 +90,22 @@
             border-radius: 7px;
             transition: .2s;
             background: #fff;
+            @include desktop_l{
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+            @include desktop_md{
+                padding: 10px 15px;
+                font-size: 10px;
+            }
+            @include tablet_xs{
+                padding: 5px 10px;
+                font-size: 8px;
+            }
+            @include mobile_md{
+                padding: 10px 20px;
+                font-size: 10px;
+            }
         }
         .link-button{
             text-decoration: none;

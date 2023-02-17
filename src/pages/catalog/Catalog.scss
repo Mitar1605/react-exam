@@ -1,3 +1,5 @@
+@import '../../breakpoints/Breakpoints.scss';
+
 body{
     background: #F5F5F5;
 }
@@ -9,6 +11,16 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 10% 0;
+  @include desktop_l{
+    height: 320px;
+  }
+  @include mobile_lg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+  }
   span{
     color: #fff;
     a{
@@ -18,18 +30,39 @@ body{
     .second-link-banner{
       color: #E41E31;
     }
+    @include desktop_l{
+      font-size: 14px;
+    }
   }
   h1{
     font-size: 48px;
     color: #fff;
     font-weight: 400;
     margin-top: 80px;
+    @include desktop_l{
+      font-size: 34px;
+      margin-top: 50px;
+    }
+    @include mobile_xs{
+      font-size: 28px;
+    }
   }
   p{
     width: 600px;
     font-size: 18px;
     color: #fff;
     margin-top: 20px;
+    @include desktop_l{
+      width: 450px;
+      font-size: 14px;
+    }
+    @include mobile_lg{
+      width: 350px;
+      font-size: 12px;
+    }
+    @include mobile_xs{
+      width: 250px;
+    }
   }
 }
 .button{
@@ -64,13 +97,52 @@ body{
       align-items: center;
       text-align: center;
       padding-top: 100px;
+
+      @include desktop_xxl{
+        padding-top: 50px;
+        height: 550px;
+      }
+      @include desktop_l{
+        padding-top: 0;
+        height: 450px;
+      }
+      img{
+        @include desktop_xxl{
+          transform: scale(.8);
+        }
+        @include desktop_l{
+          transform: scale(.7);
+          height: 60%;
+        }
+        @include tablet_md{
+          transform: scale(.5);
+        }
+        @include mobile_xs{
+          transform: scale(.5);
+          height: 50%;
+        }
+      }
       p{
         font-size: 38px;
         font-weight: 400;
         color: #fff;
+
+        @include desktop_xxl{
+          font-size: 32px;
+        }
+        @include desktop_l{
+          font-size: 28px;
+        }
+        @include tablet_md{
+          font-size: 22px;
+        }
       }
       button{
         margin-top: 30px;
+        @include tablet_md{
+          padding: 10px 20px;
+          font-size: 12px;
+        }
       }
     }
     .catalog-container{
@@ -82,10 +154,25 @@ body{
           width: 100%;
           display: flex;
           justify-content: center;
-          padding: 100px 0 50px;
+          padding: 100px 0;
+          @include desktop_l{
+            padding: 50px 0;
+          }
           h1{
               font-size: 54px;
               font-weight: 400;
+              @include desktop_l{
+                font-size: 36px;
+              }
+              @include tablet_xs{
+                font-size: 28px;
+              }
+              @include mobile_lg{
+                font-size: 24px;
+              }
+              @include mobile_xs{
+                font-size: 20px;
+              }
           }
       }
       .catalog-search-block{
@@ -98,16 +185,25 @@ body{
           align-items: center;
           padding: 10px 20px;
           background: #fff;
+          @include desktop_l{
+            padding: 7px 10px;
+          }
           input{
             outline: none;
             border: none;
             font-size: 18px;
             border-radius: 5px;
+            @include desktop_l{
+              font-size: 14px;
+            }
           }
           svg{
             cursor: pointer;
             font-size: 22px;
             color: #000;
+            @include desktop_l{
+              font-size: 14px;
+            }
           }
         }
       }
@@ -141,6 +237,15 @@ body{
           grid-template-columns: repeat(3, 1fr);
           grid-gap: 40px;
           padding-bottom: 100px;
+          @include mobile_lg{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          }
+          @include mobile_md{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
       }
     }
 }
