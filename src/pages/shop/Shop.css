@@ -42,9 +42,19 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 1366px) {
+  .shop-main .shop-banner {
+    height: 300px;
+  }
+}
 .shop-main .shop-banner h1 {
   font-size: 58px;
   font-weight: 400;
+}
+@media (max-width: 1366px) {
+  .shop-main .shop-banner h1 {
+    font-size: 42px;
+  }
 }
 .shop-main .shop-content {
   width: 100%;
@@ -65,12 +75,14 @@ h1 {
   display: flex;
 }
 .shop-main .shop-content .shop-content-container thead tr th {
-  width: 200px;
+  max-width: 200px;
+  min-width: 100px;
   font-size: 24px;
   text-align: left;
 }
 .shop-main .shop-content .shop-content-container thead tr .title-th {
-  width: 550px;
+  max-width: 550px;
+  min-width: 400px;
 }
 .shop-main .shop-content .shop-content-container tbody {
   width: 100%;
@@ -88,6 +100,11 @@ h1 {
 .shop-main .shop-content .shop-content-container tbody tr .title-td {
   width: 550px;
 }
+@media (max-width: 1440px) {
+  .shop-main .shop-content .shop-content-container .shop-buy h1 {
+    font-size: 28px;
+  }
+}
 .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-itog {
   width: 100%;
   display: flex;
@@ -96,8 +113,14 @@ h1 {
 .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-itog h1 {
   font-weight: 400;
 }
+@media (max-width: 1440px) {
+  .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-itog h1 {
+    font-size: 24px;
+  }
+}
 .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-button button {
-  padding: 25px 80px;
+  width: 100%;
+  padding: 15px 0;
   background: #E41E31;
   font-size: 22px;
   color: #fff;

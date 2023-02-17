@@ -1,3 +1,5 @@
+@import '../../breakpoints/Breakpoints.scss';
+
 .loader-div{
     width: 100%;
     display: flex;
@@ -39,9 +41,16 @@ h1{
         display: flex;
         justify-content: center;
         align-items: center;
+        
+        @include desktop_l{
+            height: 300px;
+        }
         h1{
             font-size: 58px;
             font-weight: 400;
+            @include desktop_l{
+                font-size: 42px;
+            }
         }
     }
     .shop-content{
@@ -59,12 +68,14 @@ h1{
                     width: 100%;
                     display: flex;
                     th{
-                        width: 200px;
+                        max-width: 200px;
+                        min-width: 100px;
                         font-size: 24px;
                         text-align: left;
                     }
                     .title-th{
-                        width: 550px;
+                        max-width: 550px;
+                        min-width: 400px;
                     }
                 }
             }
@@ -85,17 +96,26 @@ h1{
                 }
             }
             .shop-buy{
+                h1{
+                    @include desktop_xl {
+                        font-size: 28px;
+                    }
+                }
                 .shop-buy-itog{
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
                     h1{
                         font-weight: 400;
+                        @include desktop_xl {
+                            font-size: 24px;
+                        }
                     }
                 }
                 .shop-buy-button{
                     button{
-                        padding: 25px 80px;
+                        width: 100%;
+                        padding: 15px 0;
                         background: #E41E31;
                         font-size: 22px;
                         color: #fff;
