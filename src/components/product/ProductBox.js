@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useReducer, useState} from 'react'
 import { CartDataContext } from '../../App'
-import { Link, useNavigate } from 'react-router-dom'
 import './ProductBox.css'
 
 export default function ProductBox({product}) {
@@ -55,7 +54,7 @@ export default function ProductBox({product}) {
     const addToCart = () => {
 
         const initialItem = cartData.find(el => el.id === id)
-        if (!initialItem) {            
+        if (!initialItem && !addCart) {
             setCartData([
                 ...cartData,
                 {
@@ -68,6 +67,10 @@ export default function ProductBox({product}) {
                 }]
             )
             setAddCart(true)
+        }
+        if (addCart) {
+            setCartData(cartData.filter(el => el.id !== id))
+            setAddCart(false)
         }
         
     }

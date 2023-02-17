@@ -1,3 +1,5 @@
+@import '../../breakpoints/Breakpoints.scss';
+
 header{
     width: 100%;
     display: flex;
@@ -5,6 +7,9 @@ header{
     align-items: center;
     background: #F1F1F1;
     padding: 20px 0;
+    @include desktop_xl{
+        padding: 15px 0;
+    }
 
     .header__container{
         width: 75%;
@@ -13,6 +18,17 @@ header{
             display: flex;  
             justify-content: space-between;
             align-items: center;
+            .header__content-logo{
+                @include desktop_xl{
+                    width: 64px;
+                }
+                @include tablet_md{
+                    width: 48px;
+                }
+                img{
+                    width: 100%;
+                }
+            }
 
             .header__content-navigate{
                 nav{
@@ -20,6 +36,9 @@ header{
                         display: flex;
                         list-style: none;
                         gap: 20px;
+                        @include tablet_md{
+                            gap: 10px;
+                        }
                         li{
                             display: flex;
                             align-items: center;
@@ -28,6 +47,18 @@ header{
                                 color: #000;
                                 transition: .2s;
                                 font-size: 20px;
+                                @include desktop_xl{
+                                    font-size: 14px;
+                                }
+                                @include desktop_lg{
+                                    font-size: 12px;
+                                }
+                                @include tablet_md{
+                                    font-size: 10px;
+                                }
+                                @include tablet_xs{
+                                    font-size: 8px;
+                                }
 
                                 &:hover{
                                     opacity: .7;
@@ -54,9 +85,29 @@ header{
                                 background-color: #fff;
                                 transition: .2s;
                                 gap: 0;
+
+                                @include desktop_xl{
+                                    width: 250px;
+                                    left: -80px;
+                                }
+                                @include tablet_md {
+                                    width: 200px;
+                                    left: -50px;
+                                }
+                                @include tablet_xs{
+                                    width: 150px;
+                                    top: 40px;
+                                }
+
                                 a{
                                     width: 100%;
                                     padding: 15px 20px;
+                                    @include desktop_xl{
+                                        padding: 10px 15px;
+                                    }
+                                    @include tablet_md{
+                                        padding: 7px 10px;
+                                    }
                                 }
                                 
                             }
@@ -72,6 +123,12 @@ header{
 
             .header__content-call{
                 margin-left: 100px;
+                @include desktop_xl{
+                    margin-left: 50px;
+                }
+                @include tablet_xs{
+                    margin-left: 0;
+                }
                 button{
                     cursor: pointer;
                     padding: 15px 25px;
@@ -84,6 +141,16 @@ header{
                     &:hover{
                         background: #E63861;
                     }
+
+                    @include desktop_lg{
+                        font-size: 11px;
+                    }
+                    @include tablet_md{
+                        padding: 10px 15px;
+                        font-size: 8px;
+                        border-radius: 5px;
+                    }
+
                 }
             }
         }

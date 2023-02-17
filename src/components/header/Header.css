@@ -6,6 +6,11 @@ header {
   background: #F1F1F1;
   padding: 20px 0;
 }
+@media (max-width: 1440px) {
+  header {
+    padding: 15px 0;
+  }
+}
 header .header__container {
   width: 75%;
 }
@@ -15,10 +20,28 @@ header .header__container .header__content {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1440px) {
+  header .header__container .header__content .header__content-logo {
+    width: 64px;
+  }
+}
+@media (max-width: 840px) {
+  header .header__container .header__content .header__content-logo {
+    width: 48px;
+  }
+}
+header .header__container .header__content .header__content-logo img {
+  width: 100%;
+}
 header .header__container .header__content .header__content-navigate nav ul {
   display: flex;
   list-style: none;
   gap: 20px;
+}
+@media (max-width: 840px) {
+  header .header__container .header__content .header__content-navigate nav ul {
+    gap: 10px;
+  }
 }
 header .header__container .header__content .header__content-navigate nav ul li {
   display: flex;
@@ -29,6 +52,26 @@ header .header__container .header__content .header__content-navigate nav ul li a
   color: #000;
   transition: 0.2s;
   font-size: 20px;
+}
+@media (max-width: 1440px) {
+  header .header__container .header__content .header__content-navigate nav ul li a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1250px) {
+  header .header__container .header__content .header__content-navigate nav ul li a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 840px) {
+  header .header__container .header__content .header__content-navigate nav ul li a {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  header .header__container .header__content .header__content-navigate nav ul li a {
+    font-size: 8px;
+  }
 }
 header .header__container .header__content .header__content-navigate nav ul li a:hover {
   opacity: 0.7;
@@ -55,9 +98,37 @@ header .header__container .header__content .header__content-navigate nav ul .hea
   transition: 0.2s;
   gap: 0;
 }
+@media (max-width: 1440px) {
+  header .header__container .header__content .header__content-navigate nav ul .header-drop-li .header__drop-ul {
+    width: 250px;
+    left: -80px;
+  }
+}
+@media (max-width: 840px) {
+  header .header__container .header__content .header__content-navigate nav ul .header-drop-li .header__drop-ul {
+    width: 200px;
+    left: -50px;
+  }
+}
+@media (max-width: 768px) {
+  header .header__container .header__content .header__content-navigate nav ul .header-drop-li .header__drop-ul {
+    width: 150px;
+    top: 40px;
+  }
+}
 header .header__container .header__content .header__content-navigate nav ul .header-drop-li .header__drop-ul a {
   width: 100%;
   padding: 15px 20px;
+}
+@media (max-width: 1440px) {
+  header .header__container .header__content .header__content-navigate nav ul .header-drop-li .header__drop-ul a {
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 840px) {
+  header .header__container .header__content .header__content-navigate nav ul .header-drop-li .header__drop-ul a {
+    padding: 7px 10px;
+  }
 }
 header .header__container .header__content .header__content-navigate nav ul .header-drop-li:hover .header__drop-ul {
   visibility: visible;
@@ -65,6 +136,16 @@ header .header__container .header__content .header__content-navigate nav ul .hea
 }
 header .header__container .header__content .header__content-call {
   margin-left: 100px;
+}
+@media (max-width: 1440px) {
+  header .header__container .header__content .header__content-call {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 768px) {
+  header .header__container .header__content .header__content-call {
+    margin-left: 0;
+  }
 }
 header .header__container .header__content .header__content-call button {
   cursor: pointer;
@@ -77,4 +158,16 @@ header .header__container .header__content .header__content-call button {
 }
 header .header__container .header__content .header__content-call button:hover {
   background: #E63861;
+}
+@media (max-width: 1250px) {
+  header .header__container .header__content .header__content-call button {
+    font-size: 11px;
+  }
+}
+@media (max-width: 840px) {
+  header .header__container .header__content .header__content-call button {
+    padding: 10px 15px;
+    font-size: 8px;
+    border-radius: 5px;
+  }
 }/*# sourceMappingURL=Header.css.map */

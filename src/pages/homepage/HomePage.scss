@@ -1,3 +1,5 @@
+@import '../../breakpoints/Breakpoints.scss';
+
 .home-page-main {
     width: 100%;
     display: flex;
@@ -17,6 +19,10 @@
 
         &:hover{
             background: #E63861;
+        }
+        @include desktop_l{
+            padding: 10px 20px;
+            font-size: 12px;
         }
     }
 
@@ -39,25 +45,75 @@
                 width: 75%;
 
                 .homepage-main-block-content {
-                    width: 800px;
+
                     margin-top: 400px;
+                    @include desktop_xxl{
+                        margin-top: 350px;
+                    }
+                    @include desktop_l{
+                        margin-top: 250px;
+                    }
+                    @include mobile_lg{
+                        margin-top: 200px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
 
                     h1 {
                         font-size: 58px;
                         color: #fff;
                         font-weight: 400;
                         text-transform: uppercase;
+
+                        @include desktop_xxl{
+                            font-size: 48px;
+                        }
+
+                        @include desktop_l{
+                            font-size: 36px;
+                        }
+                        @include mobile_lg{
+                            font-size: 28px;
+                            text-align: center;
+                        }
+                        @include mobile_xs{
+                            font-size: 22px;
+                        }
                     }
 
                     p {
+                        width: 800px;
                         margin-top: 20px;
                         font-size: 25px;
                         color: #fff;
+                        @include desktop_xxl{
+                            width: 600px;
+                            font-size: 18px;
+                        }
+                        @include desktop_l{
+                            width: 450px;
+                            font-size: 14px;
+                        }
+                        @include mobile_lg{
+                            width: 250px;
+                            font-size: 12px;
+                            text-align: center;
+                        }
                     }
 
                     a{
                         margin-top: 50px;
                         font-size: 20px;
+                        
+                        @include desktop_xxl{
+                            margin-top: 30px;
+                            font-size: 16px;
+                        }
+                        @include desktop_l{
+                            padding: 10px 20px;
+                            font-size: 12px;
+                        }
                     }
                 }
 
@@ -75,15 +131,50 @@
             width: 80%;
             display: flex;
             justify-content: space-between;
+            @include mobile_lg{
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 50px 0;
+            }
             .second-block{
                 padding: 70px 0;
                 max-width: 250px;
+                @include desktop_l{
+                    padding: 40px 0;
+                }
+                @include mobile_lg{
+                    padding: 20px 0;
+                }
                 h1{
                     font-size: 68px;
                     font-weight: 400;
+                    margin-top: 0;
+                    @include desktop_xl{
+                        font-size: 48px;
+                    }
+                    @include desktop_l{
+                        font-size: 36px;
+                    }
+                    @include tablet_md{
+                        font-size: 28px;
+                    }
+                    @include mobile_lg{
+                        font-size: 36px;
+                    }
                 }
                 p{
                     margin-top: 20px;
+                    @include desktop_l{
+                        font-size: 14px;
+                    }
+                    @include tablet_md{
+                        width: 150px;
+                        font-size: 10px;
+                    }
+                    @include mobile_lg{
+                        font-size: 12px;
+                    }
                 }
             }
         }
@@ -100,12 +191,38 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 50px;
+            @include mobile_lg{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 100%;
+            }
             .third-block-item{
                 width: 100%;
                 height: 400px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @include desktop_l{
+                    height: 300px;
+                }
+                @include tablet_md{
+                    height: 200px;
+                }
+                @include mobile_xs{
+                    height: 150px;
+                }
+                img{
+                    @include desktop_l{
+                        max-width: 200px;
+                    }
+                    @include tablet_md{
+                        max-width: 150px;
+                    }
+                    @include mobile_xs{
+                        max-width: 100px;
+                    }
+                }
             }
             .third-block-item-1{
                 background-image: url(../../assets/images/homepage-img-1.png);
@@ -157,21 +274,38 @@
             background-repeat: no-repeat;
             display: flex;
             justify-content: space-between;
+            
+            @include desktop_l{
+                height: 350px;
+            }
             .third-block-content{
                 padding-top: 70px;
                 padding-left: 100px;
                 width: 550px;
+                @include desktop_l{
+                    width: 380px;
+                }
                 h1{
                     font-size: 36px;
                     font-weight: 400;
+                    @include desktop_l{
+                        font-size: 24px;
+                    }
                 }
                 p{
                     font-size: 18px;
                     margin-top: 20px;
+                    @include desktop_l{
+                        width: 450px;
+                        font-size: 14px;
+                    }
                 }
                 button{
                     margin-top: 20px;
                     font-size: 17px;
+                    @include desktop_l{
+                        font-size: 14px;
+                    }
                 }
             }
         }
