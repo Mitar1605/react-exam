@@ -95,7 +95,7 @@ export default function ProductBox({product}) {
         </div>
         <div className="product-buttons">
             <a className='product-button link-button' href={`/catalog/${product.catalogEn}/${id}/${title}`}>Подробнее</a>
-            <button className='product-button shop-button' onClick={addToCart} >{!addCart ? 'В корзину': 'Добавлена в карзину'}</button>
+            <button className='product-button shop-button' onClick={addToCart} >{!addCart ? 'В корзину': 'Доб. в карзину'}</button>
         </div>
     </div>
   )

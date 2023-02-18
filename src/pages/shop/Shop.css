@@ -118,9 +118,13 @@ h1 {
   font-size: 24px;
   text-align: left;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1600px) {
   .shop-main .shop-content .shop-content-container tbody tr td {
     width: 150px;
+  }
+}
+@media (max-width: 1440px) {
+  .shop-main .shop-content .shop-content-container tbody tr td {
     font-size: 18px;
   }
 }
@@ -136,6 +140,11 @@ h1 {
 @media (max-width: 1440px) {
   .shop-main .shop-content .shop-content-container tbody tr .title-td {
     width: 410px;
+  }
+}
+@media (max-width: 1600px) {
+  .shop-main .shop-content .shop-content-container .shop-buy h1 {
+    font-size: 24px;
   }
 }
 @media (max-width: 1440px) {
@@ -155,6 +164,11 @@ h1 {
 }
 .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-itog h1 {
   font-weight: 400;
+}
+@media (max-width: 1600px) {
+  .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-itog h1 {
+    font-size: 22px;
+  }
 }
 @media (max-width: 1440px) {
   .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-itog h1 {
@@ -182,14 +196,15 @@ h1 {
 .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-button button:hover {
   background: #E63861;
 }
-@media (max-width: 1366px) {
+@media (max-width: 1600px) {
   .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-button button {
+    width: 120%;
     font-size: 18px;
+    font-weight: 400;
   }
 }
 @media (max-width: 1150px) {
   .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-button button {
     font-size: 14px;
-    font-weight: 400;
   }
 }/*# sourceMappingURL=Shop.css.map */
