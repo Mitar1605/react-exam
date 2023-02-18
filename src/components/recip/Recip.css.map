@@ -1,1 +1,1 @@
-{"version":3,"sources":["Recip.scss","Recip.css"],"names":[],"mappings":"AAAA;EACI,mBAAA;ACCJ;ADCQ;EACI,WAAA;ACCZ;ADEI;EACI,oBAAA;ACAR;ADCQ;EACI,eAAA;ACCZ;ADEI;EACI,kBAAA;ACAR;ADCQ;EACI,eAAA;ACCZ","file":"Recip.css"}
+{"version":3,"sources":["Recip.scss","Recip.css","../../breakpoints/Breakpoints.scss"],"names":[],"mappings":"AAEA;EACI,mBAAA;ACDJ;ADGQ;EACI,WAAA;ACDZ;AC4CI;EF5CI;IAGQ,UAAA;ECCd;AACF;ADEI;EACI,oBAAA;ACAR;ADCQ;EACI,eAAA;ACCZ;ACiCI;EFnCI;IAGQ,eAAA;ECGd;AACF;ADAI;EACI,kBAAA;ACER;ADDQ;EACI,eAAA;ACGZ;ACsBI;EF1BI;IAGQ,eAAA;ECKd;AACF","file":"Recip.css"}

@@ -1,9 +1,9 @@
-import React, {useContext, useEffect, useReducer, useState} from 'react'
+import React, {useContext, useState} from 'react'
 import './Shop.css'
 import { CartDataContext } from '../../App'
 import CartItem from '../../components/cart-item/CartItem'
 
-export default function Shop() {
+export default function Shop({showCallFunc}) {
 
     const {cartData, setCartData} = useContext(CartDataContext)
     const [itogo, setItogo] = useState(0)
@@ -54,7 +54,7 @@ export default function Shop() {
                         <h1>{itogo} ₽</h1>
                     </div>
                     <div className="shop-buy-button">
-                        <button>Оформить заказ</button>
+                        <button onClick={showCallFunc}>Оформить заказ</button>
                     </div>
                 </div>
             </div>

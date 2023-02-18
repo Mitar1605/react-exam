@@ -1,0 +1,44 @@
+@import '../../breakpoints/Breakpoints.scss';
+
+.call_container{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color: #000000, $alpha: 0.3);
+    z-index: 100;
+    form{
+        max-width: 450px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px 50px;
+        .close_btn{
+            width: 120%;
+            display: flex;
+            justify-content: flex-end;
+            svg{
+                cursor: pointer;
+            }
+        }
+        input{
+            width: 80%;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        #submit{
+            width: 50%;
+            font-size: 16px;
+            background: #E60035;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+}

@@ -2,7 +2,7 @@ import React from 'react'
 import './HomePage.css'
 import {Link} from 'react-router-dom'
 
-export default function HomePage() {
+export default function HomePage({showCallFunc}) {
   return (
     <div className='home-page-main'>
       <div className="homepage-main-block">
@@ -60,7 +60,7 @@ export default function HomePage() {
           <div className="third-block-content">
             <h1>ХОТИТЕ ПОЛУЧИТЬ СКИДОЧНЫЙ КУПОН НА ПЕРВУЮ ПОКУПКУ?</h1>
             <p>Самыми лучшими способами приготовления еды являются следующие: варка на пару, запекание или варка в воде.</p>
-            <button className='button'>Получить купон</button>
+            <button className='button' onClick={showCallFunc}>Получить купон</button>
           </div>
             <img src={require('../../assets/images/homepage-img-5.png')} alt="sale image" />
         </div>

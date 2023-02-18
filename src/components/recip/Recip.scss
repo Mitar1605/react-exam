@@ -1,20 +1,31 @@
+@import '../../breakpoints/Breakpoints.scss';
+
 .recip-box{
     background: #F5F5F5;
     .recip-img {
         img{
             width: 100%;
+            @include desktop_l{
+                width: 90%;
+            }
         }
     }
     .recip-title{
         padding: 10px 20px 0;
         p{
             font-size: 20px;
+            @include desktop_l{
+                font-size: 18px;
+            }
         }
     }
     .recip-descr{
         padding: 10px 20px;
         span{
             font-size: 18px;
+            @include desktop_l{
+                font-size: 14px;
+            }
         }
     }
 }

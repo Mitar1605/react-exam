@@ -1,3 +1,17 @@
+@import '../../breakpoints/Breakpoints.scss';
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 td{
     display: flex;
     align-items: center;
@@ -10,12 +24,25 @@ td{
     img{
         width: 150px;
         margin-right: 20px;
+        @include desktop_l{
+            width: 100px;
+        }
     }
     input{
         width: 50px;
         height: 45px;
         font-size: 24px;
         text-align: center;
+        
+        @include desktop_l {
+            width: 30px;
+            font-size: 16px;
+            height: 45px;
+        }
+        @include desktop_md{
+            width: 25px;
+            height: 35px;
+        }
     }
     .button{
         display: inline-block;
@@ -31,6 +58,15 @@ td{
       
         &:hover{
             background: #E63861;
+        }
+        
+        @include desktop_l {
+            font-size: 16px;
+        }
+        @include desktop_md{
+            width: 25px;
+            height: 35px;
+            padding: 5px;
         }
       } 
 }

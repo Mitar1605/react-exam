@@ -1,3 +1,15 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 td {
   display: flex;
   align-items: center;
@@ -12,11 +24,29 @@ td img {
   width: 150px;
   margin-right: 20px;
 }
+@media (max-width: 1366px) {
+  td img {
+    width: 100px;
+  }
+}
 td input {
   width: 50px;
   height: 45px;
   font-size: 24px;
   text-align: center;
+}
+@media (max-width: 1366px) {
+  td input {
+    width: 30px;
+    font-size: 16px;
+    height: 45px;
+  }
+}
+@media (max-width: 1150px) {
+  td input {
+    width: 25px;
+    height: 35px;
+  }
 }
 td .button {
   display: inline-block;
@@ -32,4 +62,16 @@ td .button {
 }
 td .button:hover {
   background: #E63861;
+}
+@media (max-width: 1366px) {
+  td .button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1150px) {
+  td .button {
+    width: 25px;
+    height: 35px;
+    padding: 5px;
+  }
 }/*# sourceMappingURL=CartItem.css.map */

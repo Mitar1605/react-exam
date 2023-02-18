@@ -5,7 +5,7 @@ import { useSearchParams } from 'react-router-dom'
 import { productsData } from '../../assets/data/productsData'
 import {HiOutlineSearch} from 'react-icons/hi'
 
-export default function Catalog() {
+export default function Catalog({showCallFunc}) {
 
     const searchInputValue = useRef('')
     
@@ -67,7 +67,7 @@ export default function Catalog() {
         <div className="catalog-banner">
             <img src={require('../../assets/images/catalog-banner-img.png')} alt="banner img" />
             <p>КАКОЙ-ТО ПРОМО БАННЕР <br /> НОВИНКИ ИЛИ АКЦИИ</p>
-            <button className='button'>Узнать подробнее</button>
+            <button className='button' onClick={showCallFunc}>Узнать подробнее</button>
         </div>
         <div className="catalog-container">
             <div className="catalog__title">

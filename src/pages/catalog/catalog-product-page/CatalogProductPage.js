@@ -57,7 +57,7 @@ export default function CatalogProductPage() {
     const addToCart = () => {
 
         const initialItem = cartData.find(el => el.id === id)
-        if (!initialItem) {            
+        if (!initialItem && !addCart) {
             setCartData([
                 ...cartData,
                 {
@@ -70,6 +70,10 @@ export default function CatalogProductPage() {
                 }]
             )
             setAddCart(true)
+        }
+        if (addCart) {
+            setCartData(cartData.filter(el => el.id !== id))
+            setAddCart(false)
         }
         
     }

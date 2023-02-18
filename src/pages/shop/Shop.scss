@@ -68,14 +68,28 @@ h1{
                     width: 100%;
                     display: flex;
                     th{
-                        max-width: 200px;
-                        min-width: 100px;
+                        width: 200px;
                         font-size: 24px;
                         text-align: left;
+                        @include desktop_xl{
+                            width: 150px;
+                            font-size: 20px;
+                        }
+                        @include desktop_l {
+                            font-size: 16px;
+                        }
+                        @include desktop_md{
+                            width: 100px;
+                            font-size: 14px;
+                        }
                     }
                     .title-th{
                         max-width: 550px;
                         min-width: 400px;
+
+                        @include desktop_xl{
+                            width: 410px;
+                        }
                     }
                 }
             }
@@ -89,16 +103,30 @@ h1{
                         width: 200px;
                         font-size: 24px;
                         text-align: left;
+                        @include desktop_xl{
+                            width: 150px;
+                            font-size: 18px;
+                        }
+                        @include desktop_md{
+                            width: 100px;
+                            font-size: 16px;
+                        }
                     }
                     .title-td{
                         width: 550px;
+                        @include desktop_xl{
+                            width: 410px;
+                        }
                     }
                 }
             }
             .shop-buy{
                 h1{
                     @include desktop_xl {
-                        font-size: 28px;
+                        font-size: 24px;
+                    }
+                    @include desktop_md{
+                        font-size: 18px;
                     }
                 }
                 .shop-buy-itog{
@@ -109,6 +137,9 @@ h1{
                         font-weight: 400;
                         @include desktop_xl {
                             font-size: 24px;
+                        }
+                        @include desktop_md{
+                            font-size: 18px;
                         }
                     }
                 }
@@ -127,6 +158,14 @@ h1{
                         transition: .4s;
                         &:hover{
                             background: #E63861;
+                        }
+                        
+                        @include desktop_l{
+                            font-size: 18px;
+                        }
+                        @include desktop_md{
+                            font-size: 14px;
+                            font-weight: 400;
                         }
                     }
                 }

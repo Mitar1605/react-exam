@@ -108,6 +108,12 @@
   transition: 0.2s;
   background: #fff;
 }
+@media (max-width: 1440px) {
+  .product-box .product-buttons .product-button {
+    font-size: 14px;
+    padding: 15px 25px;
+  }
+}
 @media (max-width: 1366px) {
   .product-box .product-buttons .product-button {
     padding: 10px 20px;

@@ -75,14 +75,35 @@ h1 {
   display: flex;
 }
 .shop-main .shop-content .shop-content-container thead tr th {
-  max-width: 200px;
-  min-width: 100px;
+  width: 200px;
   font-size: 24px;
   text-align: left;
+}
+@media (max-width: 1440px) {
+  .shop-main .shop-content .shop-content-container thead tr th {
+    width: 150px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 1366px) {
+  .shop-main .shop-content .shop-content-container thead tr th {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1150px) {
+  .shop-main .shop-content .shop-content-container thead tr th {
+    width: 100px;
+    font-size: 14px;
+  }
 }
 .shop-main .shop-content .shop-content-container thead tr .title-th {
   max-width: 550px;
   min-width: 400px;
+}
+@media (max-width: 1440px) {
+  .shop-main .shop-content .shop-content-container thead tr .title-th {
+    width: 410px;
+  }
 }
 .shop-main .shop-content .shop-content-container tbody {
   width: 100%;
@@ -97,12 +118,34 @@ h1 {
   font-size: 24px;
   text-align: left;
 }
+@media (max-width: 1440px) {
+  .shop-main .shop-content .shop-content-container tbody tr td {
+    width: 150px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 1150px) {
+  .shop-main .shop-content .shop-content-container tbody tr td {
+    width: 100px;
+    font-size: 16px;
+  }
+}
 .shop-main .shop-content .shop-content-container tbody tr .title-td {
   width: 550px;
 }
 @media (max-width: 1440px) {
+  .shop-main .shop-content .shop-content-container tbody tr .title-td {
+    width: 410px;
+  }
+}
+@media (max-width: 1440px) {
   .shop-main .shop-content .shop-content-container .shop-buy h1 {
-    font-size: 28px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 1150px) {
+  .shop-main .shop-content .shop-content-container .shop-buy h1 {
+    font-size: 18px;
   }
 }
 .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-itog {
@@ -116,6 +159,11 @@ h1 {
 @media (max-width: 1440px) {
   .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-itog h1 {
     font-size: 24px;
+  }
+}
+@media (max-width: 1150px) {
+  .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-itog h1 {
+    font-size: 18px;
   }
 }
 .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-button button {
@@ -133,4 +181,15 @@ h1 {
 }
 .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-button button:hover {
   background: #E63861;
+}
+@media (max-width: 1366px) {
+  .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-button button {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1150px) {
+  .shop-main .shop-content .shop-content-container .shop-buy .shop-buy-button button {
+    font-size: 14px;
+    font-weight: 400;
+  }
 }/*# sourceMappingURL=Shop.css.map */

@@ -3,7 +3,7 @@ import './Header.css'
 import {NavLink} from 'react-router-dom'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 
-export default function Header() {
+export default function Header({showCallFunc}) {
   return (
       <header>
           <div className="header__container">
@@ -32,7 +32,7 @@ export default function Header() {
                       </nav>
                   </div>
                   <div className="header__content-call">
-                      <button>Заказать звонок</button>
+                      <button onClick={showCallFunc}>Заказать звонок</button>
                   </div>
               </div>
           </div>

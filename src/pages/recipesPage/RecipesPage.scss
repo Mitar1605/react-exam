@@ -1,3 +1,5 @@
+@import '../../breakpoints/Breakpoints.scss';
+
 .recipes-main{
     width: 100%;
     display: flex;
@@ -13,6 +15,9 @@
         display: flex;
         justify-content: space-between;
         padding: 50px 15% 0 10%;
+        @include desktop_l{
+            height: 350px;
+        }
         span{
             color: #fff;
             a{
@@ -22,21 +27,35 @@
             .second-banner-link{
                 color: #E41E31;
             }
+            @include desktop_l{
+                font-size: 14px;
+            }
         }
         h1{
             font-size: 48px;
             font-weight: 400;
             color: #fff;
             margin-top: 100px;
+            @include desktop_l{
+                margin-top: 50px;
+                font-size: 28px;
+            }
         }
         p{
             margin-top: 30px;
             width: 600px;
             font-size: 18px;
             color: #fff;
+            @include desktop_l{
+                width: 450px;
+                font-size: 14px;
+            }
         }
         img{
             width: 450px;
+            @include desktop_l{
+                width: 300px;
+            }
         }
     }
     .recipes-tool-block{
@@ -56,6 +75,11 @@
                     border-radius: 10px;
                     color: #000;
                     cursor: pointer;
+                    @include desktop_l{
+                        padding: 7px 14px;
+                        border-radius: 7px;
+                        font-size: 14px;
+                    }
                 }
                 .active{
                     background: #E41E31;

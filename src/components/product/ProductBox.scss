@@ -90,6 +90,10 @@
             border-radius: 7px;
             transition: .2s;
             background: #fff;
+            @include desktop_xl{
+                font-size: 14px;
+                padding: 15px 25px;
+            }
             @include desktop_l{
                 padding: 10px 20px;
                 font-size: 12px;

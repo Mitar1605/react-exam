@@ -13,6 +13,7 @@ import CatalogElectronics from './pages/catalog/catalog-electronics/CatalogElect
 import RecipesPage from './pages/recipesPage/RecipesPage';
 import Shop from './pages/shop/Shop';
 import ScrollToTop from './hooks/scrollToTop/ScrollToTop';
+import Call from './components/call/Call';
 import { createContext } from 'react';
 
 
@@ -21,25 +22,31 @@ export const CartDataContext = createContext()
 function App() {
 
   const [cartData, setCartData] = useState([])
+  const [showCall, setShowCall] = useState(false)
+
+  const showCallFunc = () => {
+    setShowCall(true)
+  }
 
   return (
     <div className="App">
       <CartDataContext.Provider value={{cartData, setCartData}}>
         <ScrollToTop />
-        <Header />
+        <Header showCallFunc={showCallFunc} />
         <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/catalog' element={<Catalog />} />
+          <Route path='/' element={<HomePage showCallFunc={showCallFunc} />} />
+          <Route path='/catalog' element={<Catalog showCallFunc={showCallFunc} />} />
           <Route path='/catalog-kitchen' element={<CatalogKitchen />} />
           <Route path='/catalog-coffee' element={<CatalogCoffee />} />
           <Route path='/catalog-clean' element={<CatalogClean />} />
           <Route path='/catalog-electronics' element={<CatalogElectronics />} />
           <Route path='/Tips&Recipes' element={<RecipesPage />} />
-          <Route path='/shop' element={<Shop />} />
+          <Route path='/shop' element={<Shop showCallFunc={showCallFunc} />} />
           <Route path='/catalog/:catalogEn/:productId/:title' element={<CatalogProductPage />} />
         </Routes>
         <Footer />
       </CartDataContext.Provider>
+      <Call showCall={showCall} setShowCall={setShowCall} />
     </div>
   );
 }

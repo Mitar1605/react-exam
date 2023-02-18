@@ -12,6 +12,11 @@
   width: 80%;
   padding: 50px 0 100px;
 }
+@media (max-width: 1366px) {
+  .product-page__main .product-page__product .product-page__product-container {
+    padding: 50px 0;
+  }
+}
 .product-page__main .product-page__product .product-page__product-container .product__link {
   width: 80%;
 }
@@ -20,8 +25,18 @@
   text-decoration: none;
   color: #000;
 }
+@media (max-width: 1366px) {
+  .product-page__main .product-page__product .product-page__product-container .product__link a {
+    font-size: 14px;
+  }
+}
 .product-page__main .product-page__product .product-page__product-container .product__link span {
   color: #E41E31;
+}
+@media (max-width: 1366px) {
+  .product-page__main .product-page__product .product-page__product-container .product__link span {
+    font-size: 14px;
+  }
 }
 .product-page__main .product-page__product .product-page__product-container .loader-div {
   width: 100%;
@@ -53,17 +68,32 @@
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-descr__image {
   width: 485px;
 }
+@media (max-width: 1366px) {
+  .product-page__main .product-page__product .product-page__product-container .product-descr .product-descr__image {
+    width: 350px;
+  }
+}
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-descr__image img {
   width: 100%;
 }
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-description {
   padding-left: 50px;
 }
+@media (max-width: 1366px) {
+  .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-title h2 {
+    font-size: 20px;
+  }
+}
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-price {
   margin-top: 20px;
 }
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-price span {
   font-size: 20px;
+}
+@media (max-width: 1366px) {
+  .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-price span {
+    font-size: 18px;
+  }
 }
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-recycle {
   margin-top: 30px;
@@ -77,6 +107,12 @@
   color: #fff;
   background: #E41E31;
 }
+@media (max-width: 1366px) {
+  .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-recycle button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-descr {
   max-width: 750px;
 }
@@ -88,8 +124,18 @@
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-descr ul li {
   margin: 10px 0;
 }
+@media (max-width: 1366px) {
+  .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-descr ul {
+    font-size: 16px;
+  }
+}
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-descr p {
   font-size: 18px;
+}
+@media (max-width: 1366px) {
+  .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-descr p {
+    font-size: 16px;
+  }
 }
 .product-page__main .top-products-block {
   width: 100%;
@@ -102,10 +148,25 @@
   font-size: 40px;
   font-weight: 400;
 }
+@media (max-width: 1366px) {
+  .product-page__main .top-products-block .top-products-block-title h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1366px) {
+  .product-page__main .top-products-block {
+    padding: 50px 10%;
+  }
+}
 .product-page__main .top-products-block .top-product-block-products {
   padding: 100px 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+}
+@media (max-width: 1366px) {
+  .product-page__main .top-products-block .top-product-block-products {
+    padding: 50px 0;
+  }
 }/*# sourceMappingURL=CatalogProductPage.css.map */

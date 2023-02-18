@@ -4,15 +4,30 @@
 .recip-box .recip-img img {
   width: 100%;
 }
+@media (max-width: 1366px) {
+  .recip-box .recip-img img {
+    width: 90%;
+  }
+}
 .recip-box .recip-title {
   padding: 10px 20px 0;
 }
 .recip-box .recip-title p {
   font-size: 20px;
 }
+@media (max-width: 1366px) {
+  .recip-box .recip-title p {
+    font-size: 18px;
+  }
+}
 .recip-box .recip-descr {
   padding: 10px 20px;
 }
 .recip-box .recip-descr span {
   font-size: 18px;
+}
+@media (max-width: 1366px) {
+  .recip-box .recip-descr span {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=Recip.css.map */
