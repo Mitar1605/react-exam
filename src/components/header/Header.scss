@@ -1,5 +1,80 @@
 @import '../../breakpoints/Breakpoints.scss';
 
+.burger_menu{
+    display: none;
+    svg{
+        cursor: pointer;
+        font-size: 24px;
+    }
+    @include mobile_lg{
+        display: block;
+    }
+}
+
+.burger_main{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    display: none;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    .burger_menu_container{
+        width: 40%;
+        height: 100vh;
+        justify-content: flex-end;
+        background: rgba($color: #000000, $alpha: 0.3);
+    }
+    .burger_menu_navigate{
+        position: relative;
+        width: 60%;
+        background-color: #F1F1F1;
+        transition: 1s;
+        .close_icon{
+            padding: 20px 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                width: 60px;
+            }
+            svg{
+                font-size: 18px;
+                cursor: pointer;
+            }
+        }
+        nav{
+            padding: 20px 0 0 20px;
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                span{
+                    font-size: 14px;
+                    color: #686868;
+                    margin-top: 10px;
+                }
+                li{
+                    display: flex;
+                    align-items: center;
+                    a{
+                        text-decoration: none;
+                        color: #000;
+                        transition: .2s;
+                        font-size: 16px;
+                        &:hover{
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 header{
     width: 100%;
     display: flex;
@@ -127,6 +202,9 @@ header{
                         }
                     }
                 }
+                @include mobile_lg{
+                    display: none;
+                }
             }
 
             .header__content-call{
@@ -159,6 +237,9 @@ header{
                         border-radius: 5px;
                     }
 
+                }
+                @include mobile_lg{
+                    display: none;
                 }
             }
         }

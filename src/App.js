@@ -23,6 +23,7 @@ function App() {
 
   const [cartData, setCartData] = useState([])
   const [showCall, setShowCall] = useState(false)
+  const [showBurger, setShowBurger] = useState(false)
 
   const showCallFunc = () => {
     setShowCall(true)
@@ -31,8 +32,8 @@ function App() {
   return (
     <div className="App">
       <CartDataContext.Provider value={{cartData, setCartData}}>
-        <ScrollToTop />
-        <Header showCallFunc={showCallFunc} cartData={cartData} />
+        <ScrollToTop showBurger={showBurger} setShowBurger={setShowBurger} />
+        <Header showCallFunc={showCallFunc} cartData={cartData} showBurger={showBurger} setShowBurger={setShowBurger} />
         <Routes>
           <Route path='/' element={<HomePage showCallFunc={showCallFunc} />} />
           <Route path='/catalog' element={<Catalog showCallFunc={showCallFunc} />} />

@@ -1,3 +1,80 @@
+.burger_menu {
+  display: none;
+}
+.burger_menu svg {
+  cursor: pointer;
+  font-size: 24px;
+}
+@media (max-width: 460px) {
+  .burger_menu {
+    display: block;
+  }
+}
+
+.burger_main {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  display: none;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+}
+.burger_main .burger_menu_container {
+  width: 40%;
+  height: 100vh;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.3);
+}
+.burger_main .burger_menu_navigate {
+  position: relative;
+  width: 60%;
+  background-color: #F1F1F1;
+  transition: 1s;
+}
+.burger_main .burger_menu_navigate .close_icon {
+  padding: 20px 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.burger_main .burger_menu_navigate .close_icon img {
+  width: 60px;
+}
+.burger_main .burger_menu_navigate .close_icon svg {
+  font-size: 18px;
+  cursor: pointer;
+}
+.burger_main .burger_menu_navigate nav {
+  padding: 20px 0 0 20px;
+}
+.burger_main .burger_menu_navigate nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.burger_main .burger_menu_navigate nav ul span {
+  font-size: 14px;
+  color: #686868;
+  margin-top: 10px;
+}
+.burger_main .burger_menu_navigate nav ul li {
+  display: flex;
+  align-items: center;
+}
+.burger_main .burger_menu_navigate nav ul li a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.2s;
+  font-size: 16px;
+}
+.burger_main .burger_menu_navigate nav ul li a:hover {
+  opacity: 0.7;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -142,6 +219,11 @@ header .header__container .header__content .header__content-navigate nav ul .hea
   visibility: visible;
   opacity: 1;
 }
+@media (max-width: 460px) {
+  header .header__container .header__content .header__content-navigate {
+    display: none;
+  }
+}
 header .header__container .header__content .header__content-call {
   margin-left: 100px;
 }
@@ -177,5 +259,10 @@ header .header__container .header__content .header__content-call button:hover {
     padding: 10px 15px;
     font-size: 8px;
     border-radius: 5px;
+  }
+}
+@media (max-width: 460px) {
+  header .header__container .header__content .header__content-call {
+    display: none;
   }
 }/*# sourceMappingURL=Header.css.map */
