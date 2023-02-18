@@ -79,6 +79,13 @@ header .header__container .header__content .header__content-navigate nav ul li a
 header .header__container .header__content .header__content-navigate nav ul li svg {
   margin-left: 5px;
 }
+header .header__container .header__content .header__content-navigate nav ul li span {
+  font-size: 8px;
+  padding: 3px;
+  background: #E41E31;
+  color: #fff;
+  border-radius: 15px;
+}
 header .header__container .header__content .header__content-navigate nav ul .header-drop-li {
   position: relative;
   padding: 15px 0;

@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       <CartDataContext.Provider value={{cartData, setCartData}}>
         <ScrollToTop />
-        <Header showCallFunc={showCallFunc} />
+        <Header showCallFunc={showCallFunc} cartData={cartData} />
         <Routes>
           <Route path='/' element={<HomePage showCallFunc={showCallFunc} />} />
           <Route path='/catalog' element={<Catalog showCallFunc={showCallFunc} />} />
