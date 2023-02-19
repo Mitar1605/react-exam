@@ -28,7 +28,7 @@ export default function Shop({showCallFunc}) {
                                 <th className='title-th'>ТОВАР</th>
                                 <th>ЦЕНА</th>
                                 <th>КОЛИЧЕСТВО</th>
-                                <th>ПОДЫТОГ</th>
+                                <th className="title-last">ПОДЫТОГ</th>
                             </tr>
                         </thead>
                         <tbody>

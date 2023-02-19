@@ -20,12 +20,24 @@ td{
         font-size: 24px;
         margin-right: 20px;
         cursor: pointer;
+        @include tablet_xs{
+            font-size: 18px;
+        }
+        @include mobile_lg{
+            font-size: 14px;
+        }
     }
     img{
         width: 150px;
         margin-right: 20px;
         @include desktop_l{
             width: 100px;
+        }
+        @include tablet_xs{
+            width: 70px;
+        }
+        @include mobile_lg{
+            width: 50px;
         }
     }
     input{
@@ -42,6 +54,11 @@ td{
         @include desktop_md{
             width: 25px;
             height: 35px;
+        }
+        @include mobile_lg{
+            width: 15px;
+            height: 25px;
+            font-size: 12px;
         }
     }
     .button{
@@ -67,6 +84,10 @@ td{
             width: 25px;
             height: 35px;
             padding: 5px;
+        }
+        @include mobile_lg{
+            width: 15px;
+            height: 25px;
         }
       } 
 }

@@ -16,20 +16,20 @@
     height: 100vh;
     position: fixed;
     z-index: 10;
-    display: none;
+    display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     top: 0;
     left: 0;
     .burger_menu_container{
-        width: 40%;
+        width: 100%;
         height: 100vh;
         justify-content: flex-end;
-        background: rgba($color: #000000, $alpha: 0.3);
     }
     .burger_menu_navigate{
+        display: inline;
         position: relative;
-        width: 60%;
+        width: 100%;
         background-color: #F1F1F1;
         transition: 1s;
         .close_icon{
@@ -72,6 +72,46 @@
                 }
             }
         }
+    }
+}
+
+.showBurgerOpenClass {
+    animation: showBurgerOpen .3s 1;
+}
+.showBurgerCloseClass {
+    animation: showBurgerClose .3s 1;
+}
+@keyframes showBurgerOpen {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0
+    }
+}
+@keyframes showBurgerClose {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+@keyframes showBurgerMainOpen {
+    0%{
+        display: none;
+    }
+    100%{
+        display: flex;
+    }
+}
+@keyframes showBurgerMainClose {
+    0%{
+        display: flex;
+    }
+    100%{
+        display: none;
     }
 }
 

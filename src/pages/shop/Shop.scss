@@ -62,67 +62,116 @@ h1{
             display: flex;
             justify-content: space-between;
             padding: 100px 0;
-            thead{
-                width: 100%;
-                tr{
-                    width: 100%;
-                    display: flex;
-                    th{
-                        width: 200px;
-                        font-size: 24px;
-                        text-align: left;
-                        @include desktop_xl{
-                            width: 150px;
-                            font-size: 20px;
-                        }
-                        @include desktop_l {
-                            font-size: 16px;
-                        }
-                        @include desktop_md{
-                            width: 100px;
-                            font-size: 14px;
-                        }
+            @include tablet_md{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            table{
+                h1{
+                    @include mobile_lg{
+                        font-size: 18px;
+                        margin-left: 40px;
                     }
-                    .title-th{
-                        max-width: 550px;
-                        min-width: 400px;
-
-                        @include desktop_xl{
-                            width: 410px;
+                }
+                thead{
+                    width: 100%;
+                    tr{
+                        width: 100%;
+                        display: flex;
+                        th{
+                            width: 200px;
+                            font-size: 24px;
+                            text-align: left;
+                            @include desktop_xl{
+                                width: 150px;
+                                font-size: 20px;
+                            }
+                            @include desktop_l {
+                                font-size: 16px;
+                            }
+                            @include desktop_md{
+                                width: 100px;
+                                font-size: 14px;
+                            }
+                            @include mobile_lg{
+                                width: 75px;
+                                font-size: 10px;
+                            }
+                        }
+                        .title-th{
+                            max-width: 550px;
+                            
+                            @include desktop_xl{
+                                width: 410px;
+                            }
+                            @include tablet_xs{
+                                max-width: 300px;
+                            }
+                            @include mobile_lg{
+                                margin-left: 100px;
+                                max-width: 170px;
+                                @include mobile_lg{
+                                    margin-left: 40px;
+                                }
+                            }
                         }
                     }
                 }
-            }
-            tbody{
-                width: 100%;
-                tr{
+                tbody{
                     width: 100%;
-                    display: flex;
-                    margin-top: 20px;
-                    td{
-                        width: 200px;
-                        font-size: 24px;
-                        text-align: left;
-                        @include desktop_xxl{
-                            width: 150px;
+                    tr{
+                        width: 100%;
+                        display: flex;
+                        margin-top: 20px;
+                        td{
+                            width: 200px;
+                            font-size: 24px;
+                            text-align: left;
+                            @include desktop_xxl{
+                                width: 150px;
+                            }
+                            @include desktop_xl{
+                                font-size: 18px;
+                            }
+                            @include desktop_md{
+                                width: 100px;
+                                font-size: 16px;
+                            }
+                            @include tablet_xs{
+                                font-size: 14px;
+                            }
+                            @include mobile_lg{
+                                width: 75px;
+                                font-size: 10px;
+                            }
                         }
-                        @include desktop_xl{
-                            font-size: 18px;
+                        .title-td{
+                            width: 550px;
+                            @include desktop_xl{
+                                width: 410px;
+                            }
+                            @include tablet_xs{
+                                max-width: 300px;
+                            }
+                            @include mobile_lg{
+                                margin-left: 80px;
+                                max-width: 200px;
+                            }
+                            @include mobile_lg{
+                                margin-left: 40px;
+                            }
                         }
-                        @include desktop_md{
-                            width: 100px;
-                            font-size: 16px;
-                        }
+    
                     }
-                    .title-td{
-                        width: 550px;
-                        @include desktop_xl{
-                            width: 410px;
-                        }
-                    }
+    
                 }
             }
             .shop-buy{
+                @include tablet_md{
+                    width: 100%;
+                    margin-top: 50px;
+                }
                 h1{
                     @include desktop_xxl{
                         font-size: 24px;
@@ -176,10 +225,16 @@ h1{
                         @include desktop_md{
                             font-size: 14px;
                         }
+                        @include tablet_md{
+                            width: 100%;
+                        }
                     }
                 }
 
             }
         }
     }
+}
+.title-last{
+    width: 30px !important;
 }

@@ -4,8 +4,10 @@ import {NavLink} from 'react-router-dom'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import {AiOutlineClose} from 'react-icons/ai'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 export default function Header({showCallFunc, cartData, showBurger, setShowBurger}) {
+    showBurger ? disableBodyScroll(document) : enableBodyScroll(document)
   return (
       <header>
           <div className="header__container">
@@ -41,7 +43,7 @@ export default function Header({showCallFunc, cartData, showBurger, setShowBurge
                   </div>
                   <div className="burger_main" style={{display: showBurger ? 'flex': 'none'}}>
 
-                    <div className="burger_menu_navigate">
+                    <div className={showBurger ? 'showBurgerOpenClass burger_menu_navigate': 'showBurgerCloseClass burger_menu_navigate'}>
                           <div className="close_icon">
                             <NavLink to='/'>
                                 <img src={require('../../assets/images/logo.png')} alt="logo" />

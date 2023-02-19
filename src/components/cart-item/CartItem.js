@@ -38,7 +38,7 @@ export default function CartItem({product, deleteItem, setItogo}) {
             <input type="number" value={calcCount} onChange={(e) => setCalcCount(e.target.value)}/>
             <button className='button' onClick={plusCount}>+</button>
         </td>   
-        <td>{+price * calcCount} ₽</td>
+        <td className='title-last'>{+price * calcCount} ₽</td>
     </>
   )
 }
