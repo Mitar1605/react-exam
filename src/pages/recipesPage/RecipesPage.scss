@@ -18,6 +18,9 @@
         @include desktop_l{
             height: 350px;
         }
+        @include tablet_xs{
+            padding: 50px 15% 0 5%;
+        }
         span{
             color: #fff;
             a{
@@ -30,6 +33,9 @@
             @include desktop_l{
                 font-size: 14px;
             }
+            @include tablet_xs{
+                font-size: 12px;
+            }
         }
         h1{
             font-size: 48px;
@@ -39,6 +45,10 @@
             @include desktop_l{
                 margin-top: 50px;
                 font-size: 28px;
+            }
+            @include tablet_xs{
+                margin-top: 30px;
+                font-size: 22px;
             }
         }
         p{
@@ -50,11 +60,26 @@
                 width: 450px;
                 font-size: 14px;
             }
+            
+            @include tablet_xs{
+                width: 400px;
+                font-size: 12px;
+            }
+            @include mobile_lg{
+                width: 300px;
+            }
         }
         img{
             width: 450px;
             @include desktop_l{
                 width: 300px;
+            }
+            @include tablet_xs{
+                width: 250px;
+                height: 250px;
+            }
+            @include mobile_lg{
+                display: none;
             }
         }
     }
@@ -68,6 +93,14 @@
                 list-style: none;
                 display: flex;
                 gap: 20px;
+                
+                @include mobile_lg{
+                    gap: 5px;
+                }
+                @include mobile_md{
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
                 li{
                     text-decoration: none;
                     padding: 10px 20px;
@@ -79,6 +112,10 @@
                         padding: 7px 14px;
                         border-radius: 7px;
                         font-size: 14px;
+                    }
+                    @include mobile_lg{
+                        font-size: 10px;
+                        padding: 5px 10px;
                     }
                 }
                 .active{
@@ -117,5 +154,13 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 40px;
         padding: 100px 0;
+        @include mobile_lg{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mobile_md{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }

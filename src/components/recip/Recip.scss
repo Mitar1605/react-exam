@@ -12,19 +12,37 @@
     }
     .recip-title{
         padding: 10px 20px 0;
+        @include mobile_lg{
+            padding: 5px 10px;
+        }
         p{
             font-size: 20px;
             @include desktop_l{
                 font-size: 18px;
             }
+            @include mobile_lg{
+                font-size: 14px;
+            }
+            @include mobile_md{
+                font-size: 16px;
+            }
         }
     }
     .recip-descr{
         padding: 10px 20px;
+        @include mobile_lg{
+            padding: 5px 10px;
+        }
         span{
             font-size: 18px;
             @include desktop_l{
                 font-size: 14px;
+            }
+            @include mobile_lg{
+                font-size: 10px;
+            }
+            @include mobile_md{
+                font-size: 13px;
             }
         }
     }

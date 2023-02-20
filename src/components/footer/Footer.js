@@ -22,9 +22,8 @@ export default function Footer() {
                             <h4>Меню</h4>
 
                             <ul>
+                                <li><NavLink to='/catalog'>Каталог</NavLink></li>
                                 <li><NavLink to='/shop'>Корзина</NavLink> <AiOutlineShoppingCart /></li>
-                                <li><NavLink to='/'>Оплата и доставка</NavLink></li>
-                                <li><NavLink to='/'>Сервис</NavLink></li>
                                 <li><NavLink to='/Tips&Recipes'>Советы и рецепты</NavLink></li>
                             </ul>
                         </div>

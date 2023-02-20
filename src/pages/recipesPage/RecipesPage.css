@@ -20,6 +20,11 @@
     height: 350px;
   }
 }
+@media (max-width: 768px) {
+  .recipes-main .recipes-banner {
+    padding: 50px 15% 0 5%;
+  }
+}
 .recipes-main .recipes-banner span {
   color: #fff;
 }
@@ -35,6 +40,11 @@
     font-size: 14px;
   }
 }
+@media (max-width: 768px) {
+  .recipes-main .recipes-banner span {
+    font-size: 12px;
+  }
+}
 .recipes-main .recipes-banner h1 {
   font-size: 48px;
   font-weight: 400;
@@ -45,6 +55,12 @@
   .recipes-main .recipes-banner h1 {
     margin-top: 50px;
     font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .recipes-main .recipes-banner h1 {
+    margin-top: 30px;
+    font-size: 22px;
   }
 }
 .recipes-main .recipes-banner p {
@@ -59,12 +75,34 @@
     font-size: 14px;
   }
 }
+@media (max-width: 768px) {
+  .recipes-main .recipes-banner p {
+    width: 400px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 460px) {
+  .recipes-main .recipes-banner p {
+    width: 300px;
+  }
+}
 .recipes-main .recipes-banner img {
   width: 450px;
 }
 @media (max-width: 1366px) {
   .recipes-main .recipes-banner img {
     width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .recipes-main .recipes-banner img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (max-width: 460px) {
+  .recipes-main .recipes-banner img {
+    display: none;
   }
 }
 .recipes-main .recipes-tool-block {
@@ -77,6 +115,17 @@
   list-style: none;
   display: flex;
   gap: 20px;
+}
+@media (max-width: 460px) {
+  .recipes-main .recipes-tool-block .recipes-tool-container ul {
+    gap: 5px;
+  }
+}
+@media (max-width: 412px) {
+  .recipes-main .recipes-tool-block .recipes-tool-container ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .recipes-main .recipes-tool-block .recipes-tool-container ul li {
   text-decoration: none;
@@ -91,6 +140,12 @@
     padding: 7px 14px;
     border-radius: 7px;
     font-size: 14px;
+  }
+}
+@media (max-width: 460px) {
+  .recipes-main .recipes-tool-block .recipes-tool-container ul li {
+    font-size: 10px;
+    padding: 5px 10px;
   }
 }
 .recipes-main .recipes-tool-block .recipes-tool-container ul .active {
@@ -125,4 +180,16 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   padding: 100px 0;
+}
+@media (max-width: 460px) {
+  .recipes-main .recipes-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 412px) {
+  .recipes-main .recipes-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=RecipesPage.css.map */

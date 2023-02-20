@@ -15,7 +15,7 @@ export default function Call({showCall, setShowCall}) {
                 <AiOutlineClose onClick={closeCallFunc} />
             </div>
             <h4>Оставьте свою номер, мы свяжемся с вами</h4>
-            <input type="number" name='tel:' placeholder='тел:' />
+            <input type="number" name='tel:' placeholder='тел:' required />
             <input type="submit" id="submit" value='Отправить' />
         </form>
     </div>

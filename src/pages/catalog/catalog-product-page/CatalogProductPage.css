@@ -30,12 +30,22 @@
     font-size: 14px;
   }
 }
+@media (max-width: 460px) {
+  .product-page__main .product-page__product .product-page__product-container .product__link a {
+    font-size: 12px;
+  }
+}
 .product-page__main .product-page__product .product-page__product-container .product__link span {
   color: #E41E31;
 }
 @media (max-width: 1366px) {
   .product-page__main .product-page__product .product-page__product-container .product__link span {
     font-size: 14px;
+  }
+}
+@media (max-width: 460px) {
+  .product-page__main .product-page__product .product-page__product-container .product__link span {
+    font-size: 12px;
   }
 }
 .product-page__main .product-page__product .product-page__product-container .loader-div {
@@ -78,6 +88,11 @@
 }
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-description {
   padding-left: 50px;
+}
+@media (max-width: 460px) {
+  .product-page__main .product-page__product .product-page__product-container .product-descr .product-description {
+    padding-left: 10px;
+  }
 }
 @media (max-width: 1366px) {
   .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-title h2 {
@@ -129,12 +144,22 @@
     font-size: 16px;
   }
 }
+@media (max-width: 460px) {
+  .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-descr ul {
+    font-size: 12px;
+  }
+}
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-descr p {
   font-size: 18px;
 }
 @media (max-width: 1366px) {
   .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-descr p {
     font-size: 16px;
+  }
+}
+@media (max-width: 460px) {
+  .product-page__main .product-page__product .product-page__product-container .product-descr .product-description .product-description-descr p {
+    font-size: 12px;
   }
 }
 .product-page__main .top-products-block {
@@ -153,6 +178,11 @@
     font-size: 32px;
   }
 }
+@media (max-width: 460px) {
+  .product-page__main .top-products-block .top-products-block-title h1 {
+    font-size: 24px;
+  }
+}
 @media (max-width: 1366px) {
   .product-page__main .top-products-block {
     padding: 50px 10%;
@@ -168,5 +198,17 @@
 @media (max-width: 1366px) {
   .product-page__main .top-products-block .top-product-block-products {
     padding: 50px 0;
+  }
+}
+@media (max-width: 460px) {
+  .product-page__main .top-products-block .top-product-block-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 412px) {
+  .product-page__main .top-products-block .top-product-block-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=CatalogProductPage.css.map */

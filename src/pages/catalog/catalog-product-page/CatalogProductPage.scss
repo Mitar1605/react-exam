@@ -23,11 +23,17 @@
                     @include desktop_l{
                         font-size: 14px;
                     }
+                    @include mobile_lg{
+                        font-size: 12px;
+                    }
                 }
                 span{
                     color: #E41E31;
                     @include desktop_l{
                         font-size: 14px;
+                    }
+                    @include mobile_lg{
+                        font-size: 12px;
                     }
                 }
             }
@@ -70,6 +76,9 @@
                 }
                 .product-description{
                     padding-left: 50px;
+                    @include mobile_lg{
+                        padding-left: 10px;
+                    }
                     .product-description-title{
                         h2{
                             @include desktop_l{
@@ -114,11 +123,17 @@
                             @include desktop_l{
                                 font-size: 16px;
                             }
+                            @include mobile_lg{
+                                font-size: 12px;
+                            }
                         }
                         p{
                             font-size: 18px;
                             @include desktop_l{
                                 font-size: 16px;
+                            }
+                            @include mobile_lg{
+                                font-size: 12px;
                             }
                         }
                     }
@@ -138,6 +153,9 @@
                 @include desktop_l{
                     font-size: 32px;
                 }
+                @include mobile_lg{
+                    font-size: 24px;
+                }
             }
         }
         @include desktop_l{
@@ -151,6 +169,14 @@
             gap: 40px;
             @include desktop_l{
                 padding: 50px 0;
+            }
+            @include mobile_lg{
+                grid-template-columns: (repeat(2, 1fr));
+            }
+            @include mobile_md{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
         }
     }

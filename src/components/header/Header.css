@@ -74,6 +74,29 @@
 .burger_main .burger_menu_navigate nav ul li a:hover {
   opacity: 0.7;
 }
+.burger_main .burger_menu_navigate nav ul li span {
+  font-size: 8px;
+  padding: 3px;
+  background: #E41E31;
+  color: #fff;
+  border-radius: 15px;
+}
+.burger_main .burger_menu_navigate .header__content-call-burger {
+  padding: 30px 0 0 10%;
+}
+.burger_main .burger_menu_navigate .header__content-call-burger button {
+  cursor: pointer;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  background: #E41E31;
+  transition: 0.2s;
+  font-size: 12px;
+}
+.burger_main .burger_menu_navigate .header__content-call-burger button:hover {
+  background: #E63861;
+}
 
 .showBurgerOpenClass {
   animation: showBurgerOpen 0.3s 1;

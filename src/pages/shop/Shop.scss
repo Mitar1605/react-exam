@@ -68,6 +68,9 @@ h1{
                 align-items: center;
             }
             table{
+                @include mobile_lg{
+                    margin-left: -40px;
+                }
                 h1{
                     @include mobile_lg{
                         font-size: 18px;

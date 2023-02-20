@@ -29,8 +29,6 @@ export default function Header({showCallFunc, cartData, showBurger, setShowBurge
                                     </ul>
                                 </li>
                               <li><NavLink to="/shop">Корзина</NavLink><AiOutlineShoppingCart /> <span>{cartData.length}</span></li>
-                              <li><NavLink to="/">Оплата и доставка</NavLink></li>
-                              <li><NavLink to="/">Сервис</NavLink></li>
                               <li><NavLink to="/Tips&Recipes">Советы и рецепты</NavLink></li>
                           </ul>
                       </nav>
@@ -55,8 +53,6 @@ export default function Header({showCallFunc, cartData, showBurger, setShowBurge
                                   <span>Меню</span>
                                   <li className='header-drop-li'><NavLink to="/catalog">Каталог</NavLink></li>
                                   <li><NavLink to="/shop">Корзина</NavLink><AiOutlineShoppingCart /> <span>{cartData.length}</span></li>
-                                  <li><NavLink to="/">Оплата и доставка</NavLink></li>
-                                  <li><NavLink to="/">Сервис</NavLink></li>
                                   <li><NavLink to="/Tips&Recipes">Советы и рецепты</NavLink></li>
                               </ul>
                               <ul className="header__drop-ul">
@@ -67,6 +63,9 @@ export default function Header({showCallFunc, cartData, showBurger, setShowBurge
                                   <li className="header__nav-ul-li header__nav-drop-ul-li"><NavLink to="/catalog-clean" className={"header__nav-ul-li-a"}>SATE Чистый дом</NavLink></li>
                               </ul>
                           </nav>
+                        <div className="header__content-call-burger">
+                            <button onClick={showCallFunc}>Заказать звонок</button>
+                        </div>
                     </div>
                   <div className="burger_menu_container" onClick={() => setShowBurger(false)} ></div>
                   </div>

@@ -75,6 +75,11 @@ h1 {
   }
 }
 @media (max-width: 460px) {
+  .shop-main .shop-content .shop-content-container table {
+    margin-left: -40px;
+  }
+}
+@media (max-width: 460px) {
   .shop-main .shop-content .shop-content-container table h1 {
     font-size: 18px;
     margin-left: 40px;
