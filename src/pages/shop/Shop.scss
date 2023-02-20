@@ -103,17 +103,17 @@ h1{
                             }
                         }
                         .title-th{
-                            max-width: 550px;
+                            width: 550px;
                             
                             @include desktop_xl{
                                 width: 410px;
                             }
                             @include tablet_xs{
-                                max-width: 300px;
+                                width: 300px;
                             }
                             @include mobile_lg{
                                 margin-left: 100px;
-                                max-width: 170px;
+                                width: 170px;
                                 @include mobile_lg{
                                     margin-left: 40px;
                                 }
@@ -239,5 +239,7 @@ h1{
     }
 }
 .title-last{
-    width: 30px !important;
+    @include mobile_lg{
+        width: 30px !important;
+    }
 }

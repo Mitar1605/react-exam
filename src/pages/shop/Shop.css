@@ -121,7 +121,7 @@ h1 {
   }
 }
 .shop-main .shop-content .shop-content-container table thead tr .title-th {
-  max-width: 550px;
+  width: 550px;
 }
 @media (max-width: 1440px) {
   .shop-main .shop-content .shop-content-container table thead tr .title-th {
@@ -130,13 +130,13 @@ h1 {
 }
 @media (max-width: 768px) {
   .shop-main .shop-content .shop-content-container table thead tr .title-th {
-    max-width: 300px;
+    width: 300px;
   }
 }
 @media (max-width: 460px) {
   .shop-main .shop-content .shop-content-container table thead tr .title-th {
     margin-left: 100px;
-    max-width: 170px;
+    width: 170px;
   }
 }
 @media (max-width: 460px) and (max-width: 460px) {
@@ -286,6 +286,8 @@ h1 {
   }
 }
 
-.title-last {
-  width: 30px !important;
+@media (max-width: 460px) {
+  .title-last {
+    width: 30px !important;
+  }
 }/*# sourceMappingURL=Shop.css.map */
