@@ -101,7 +101,7 @@ export default function CatalogProductPage() {
                                           <span>{price}</span>
                                       </div>
                                       <div className="product-description-recycle">
-                                          <button onClick={addToCart}>{!addCart ? 'В корзину': 'Добавлена в карзину'}</button>
+                                          <button onClick={addToCart}>{!addCart ? 'В корзину': 'Доб. в карзину'}</button>
                                       </div>
                                       <div className="product-description-descr">
                                           <ul>

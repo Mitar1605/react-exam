@@ -10,16 +10,21 @@
   display: flex;
   justify-content: space-between;
 }
-.faq-item-block .faq-ul li .faq-item-title .faq-close-icon {
-  font-size: 40px;
-  color: red;
-  cursor: pointer;
+@media (max-width: 768px) {
+  .faq-item-block .faq-ul li .faq-item-title h3 {
+    font-size: 18px;
+  }
 }
-.faq-item-block .faq-ul li .faq-item-title svg {
+.faq-item-block .faq-ul li svg {
   font-size: 30px;
   cursor: pointer;
 }
-.faq-item-block .faq-ul li::before {
+@media (max-width: 768px) {
+  .faq-item-block .faq-ul li svg {
+    font-size: 24px;
+  }
+}
+.faq-item-block .faq-ul::before {
   content: "";
   display: block;
   margin: 20px 0;
@@ -27,8 +32,13 @@
   padding-top: 1px;
   background: #000;
 }
-.faq-item-block .faq-ul li p {
+.faq-item-block .faq-ul p {
   width: 70%;
   font-size: 18px;
   margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .faq-item-block .faq-ul p {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=Faq.css.map */

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Faq.css'
 import {AiOutlinePlus} from 'react-icons/ai'
 import {AiOutlineCloseCircle} from 'react-icons/ai'
@@ -10,7 +10,7 @@ export default function Faq({num}) {
     return (
     <div className='faq-item-block'>
           <ul className='faq-ul'>
-              <li style={{height: showLess ? '100%': '70px'}}>
+              <li style={{height: showLess ? '100%': '30px'}}>
                   <div className="faq-item-title">
                       <h3>Какой-то вопрос {num}</h3>
                       {

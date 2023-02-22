@@ -18,7 +18,7 @@
   }
 }
 .product-page__main .product-page__product .product-page__product-container .product__link {
-  width: 80%;
+  width: 100%;
 }
 .product-page__main .product-page__product .product-page__product-container .product__link a {
   font-size: 18px;
@@ -74,6 +74,12 @@
   margin-top: 70px;
   width: 100%;
   display: flex;
+}
+@media (max-width: 460px) {
+  .product-page__main .product-page__product .product-page__product-container .product-descr {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .product-page__main .product-page__product .product-page__product-container .product-descr .product-descr__image {
   width: 485px;

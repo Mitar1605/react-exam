@@ -81,6 +81,8 @@
         padding: 20px 0;
         @include tablet_xs{
             padding: 10px 0;
+            gap: 5px;
+            flex-direction: column;
         }
         .product-button{
             border: 1px solid #E41E31;
@@ -101,12 +103,14 @@
             @include desktop_md{
                 padding: 10px 15px;
                 font-size: 10px;
+                display: block;
             }
             @include tablet_xs{
-                padding: 5px 10px;
+                padding: 7px;
                 font-size: 8px;
+                text-align: center;
             }
-            @include mobile_md{
+            @include mobile_lg{
                 padding: 10px 20px;
                 font-size: 10px;
             }

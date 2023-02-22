@@ -1,3 +1,5 @@
+@import '../../breakpoints/Breakpoints.scss';
+
 .faq-item-block{
     .faq-ul{
     list-style: none;
@@ -8,10 +10,18 @@
             width: 100%;
             display: flex ;
             justify-content: space-between;
+            h3{
+                @include tablet_xs{
+                    font-size: 18px;
+                }
+            }
             }
             svg{
                 font-size: 30px;
                 cursor: pointer;
+                @include tablet_xs{
+                    font-size: 24px;
+                }
             }
         }
         &::before{
@@ -26,6 +36,9 @@
             width: 70%;
             font-size: 18px;
             margin-top: 20px;
+            @include tablet_xs{
+                font-size: 14px;
+            }
         }
     }
-}}
+}

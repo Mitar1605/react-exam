@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './CartItem.css'
+import {Link} from 'react-router-dom'
 import {AiOutlineClose} from 'react-icons/ai'
 import { CartDataContext } from '../../App'
 
@@ -29,8 +30,10 @@ export default function CartItem({product, deleteItem, setItogo}) {
     <>
         <td className='title-td'>
             <AiOutlineClose onClick={() => deleteItem(id)} />
-            <img src={require(`../../assets/images/product-images/${thumbnail}`)} alt="product image" />
-            {title}
+            <Link to={`/catalog/${product.catalogEn}/${id}/${title}`}>
+                <img src={require(`../../assets/images/product-images/${thumbnail}`)} alt="product image" />
+                <span>{title}</span>
+            </Link>
         </td>   
         <td>{price} ₽</td>   
         <td>

@@ -223,6 +223,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 50px 0;
 }
 .catalog__main .catalog-container .catalog-search-block form {
@@ -297,5 +298,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+@media (max-width: 412px) {
+  .catalog__main .catalog-container .catalog-products-block h1 {
+    font-size: 22px;
   }
 }/*# sourceMappingURL=Catalog.css.map */

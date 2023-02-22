@@ -107,4 +107,11 @@ td .button:hover {
     width: 15px;
     height: 25px;
   }
+}
+
+.title-td a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
 }/*# sourceMappingURL=CartItem.css.map */
