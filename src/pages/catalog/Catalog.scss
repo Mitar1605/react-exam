@@ -248,7 +248,7 @@ body{
             align-items: center;
           }
           h1{
-            @include mobile_md{
+            @include mobile_lg{
               font-size: 22px;
             }
           }

@@ -300,7 +300,7 @@ body {
     align-items: center;
   }
 }
-@media (max-width: 412px) {
+@media (max-width: 460px) {
   .catalog__main .catalog-container .catalog-products-block h1 {
     font-size: 22px;
   }
