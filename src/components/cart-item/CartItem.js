@@ -6,7 +6,7 @@ import { CartDataContext } from '../../App'
 
 export default function CartItem({product, deleteItem, setItogo}) {
     const {cartData, setCartData} = useContext(CartDataContext)
-    const {id, title, price, thumbnail, count} = product
+    const {id, title, price, catalogEn, thumbnail, count} = product
     const [calcCount, setCalcCount] = useState(count)
     
     useEffect(() => {
@@ -30,7 +30,7 @@ export default function CartItem({product, deleteItem, setItogo}) {
     <>
         <td className='title-td'>
             <AiOutlineClose onClick={() => deleteItem(id)} />
-            <Link to={`/catalog/${product.catalogEn}/${id}/${title}`}>
+            <Link to={`/catalog/${catalogEn}/${id}/${title}`}>
                 <img src={require(`../../assets/images/product-images/${thumbnail}`)} alt="product image" />
                 <span>{title}</span>
             </Link>

@@ -6,7 +6,7 @@ export default function ProductBox({product}) {
 
     const {cartData, setCartData} = useContext(CartDataContext)
 
-    const {id, title, lessDescr, price, catalog, thumbnail, count} = product
+    const {id, title, lessDescr, price, catalogEn, thumbnail, count} = product
     const [addCart, setAddCart] = useState(false)
 
     const initialImageState = {
@@ -62,6 +62,7 @@ export default function ProductBox({product}) {
                     title: title,
                     thumbnail: thumbnail,
                     lessDescr: lessDescr,
+                    catalogEn: catalogEn,
                     price: price.slice(0, price.indexOf('₽') - 1).replace(' ', ''),
                     count: 1 
                 }]
