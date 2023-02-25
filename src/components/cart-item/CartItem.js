@@ -5,7 +5,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 import { CartDataContext } from '../../App'
 
 export default function CartItem({product, deleteItem, setItogo}) {
-    const {cartData, setCartData} = useContext(CartDataContext)
+    const {cartData} = useContext(CartDataContext)
     const {id, title, price, catalogEn, thumbnail, count} = product
     const [calcCount, setCalcCount] = useState(count)
     
@@ -13,16 +13,16 @@ export default function CartItem({product, deleteItem, setItogo}) {
         product.count = calcCount
         product.paditog = +price * calcCount
         setItogo(cartData.reduce((aggr, el) => aggr + el.paditog, 0))
-        if (calcCount < 1) deleteItem(id)
+        if (+calcCount < 1 && calcCount !== '') deleteItem(id)
     }, [cartData, calcCount])
     
 
     const plusCount = () => {
-        setCalcCount(() => calcCount + 1)
+        setCalcCount(() => +calcCount + 1)
     }
     
     const minusCount = () => {
-        setCalcCount(() => calcCount - 1)
+        setCalcCount(() => +calcCount - 1)
     }
 
     
