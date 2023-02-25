@@ -10,7 +10,7 @@ export default function CartItem({product, deleteItem, setItogo}) {
     const [calcCount, setCalcCount] = useState(count)
     
     useEffect(() => {
-        product.count = calcCount
+        product.count = +calcCount
         product.paditog = +price * calcCount
         setItogo(cartData.reduce((aggr, el) => aggr + el.paditog, 0))
         if (+calcCount < 1 && calcCount !== '') deleteItem(id)

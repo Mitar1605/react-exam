@@ -2,14 +2,17 @@ import React, {useContext, useState, useReducer, useEffect} from 'react'
 import './CatalogProductPage.css'
 import { CartDataContext } from '../../../App'
 import { productsData } from '../../../assets/data/productsData'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useLocation } from 'react-router-dom'
 import ProductBox from '../../../components/product/ProductBox'
 
 
 export default function CatalogProductPage() {
+
+    const {pathname} = useLocation()
+
     const {cartData, setCartData} = useContext(CartDataContext)
-    const [addCart, setAddCart] = useState(false)
     const {productId} = useParams()
+    const [addCart, setAddCart] = useState(productsData.find(el => el.id === +productId).count > 0)
 
     const initialProductState = {
         isLoading: false,
@@ -52,28 +55,31 @@ export default function CatalogProductPage() {
         getData
         .then(data => dispatch({type: 'isSucces', payload: data}))
         .catch(err => dispatch({type: 'isError'}))
-    }, [])
+    }, [pathname])
+    
 
     const addToCart = () => {
 
         const initialItem = cartData.find(el => el.id === id)
         if (!initialItem && !addCart) {
-            setCartData([
-                ...cartData,
-                {
-                    id: id,
-                    title: title,
-                    thumbnail: thumbnail,
-                    lessDescr: lessDescr,
-                    price: price.slice(0, price.indexOf('₽') - 1).replace(' ', ''),
-                    count: 1 
-                }]
+        setCartData([
+            ...cartData,
+            {
+                id: id,
+                title: title,
+                thumbnail: thumbnail,
+                lessDescr: lessDescr,
+                price: price.slice(0, price.indexOf('₽') - 1).replace(' ', ''),
+                count: 1 
+            }]
             )
             setAddCart(true)
+            productsData.find(el => el.id === +productId).count = 1
         }
         if (addCart) {
             setCartData(cartData.filter(el => el.id !== id))
             setAddCart(false)
+            productsData.find(el => el.id === +productId).count = 0
         }
         
     }
@@ -91,7 +97,6 @@ export default function CatalogProductPage() {
                               <div className='product-descr'>
                                   <div className="product-descr__image">
                                       <img src={require(`../../../assets/images/product-images/img-${productId}.png`)} alt={title} />
-                                      {/* stex mi hat xndir ka, yete img-i src-um useParams-ic stacac productId-ii texy thumbnail kam id dnenq error kta  */}
                                   </div>
                                   <div className="product-description">
                                       <div className="product-description-title">

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useReducer, useState} from 'react'
+import { Link } from 'react-router-dom'
 import { CartDataContext } from '../../App'
 import './ProductBox.css'
 
@@ -7,7 +8,7 @@ export default function ProductBox({product}) {
     const {cartData, setCartData} = useContext(CartDataContext)
 
     const {id, title, lessDescr, price, catalogEn, thumbnail, count} = product
-    const [addCart, setAddCart] = useState(false)
+    const [addCart, setAddCart] = useState(count > 0)
 
     const initialImageState = {
         imageIsLoading: false,
@@ -55,23 +56,24 @@ export default function ProductBox({product}) {
 
         const initialItem = cartData.find(el => el.id === id)
         if (!initialItem && !addCart) {
-            setCartData([
-                ...cartData,
-                {
-                    id: id,
-                    title: title,
-                    thumbnail: thumbnail,
-                    lessDescr: lessDescr,
-                    catalogEn: catalogEn,
-                    price: price.slice(0, price.indexOf('₽') - 1).replace(' ', ''),
-                    count: 1 
-                }]
+        setCartData([
+            ...cartData,
+            {
+                id: id,
+                title: title,
+                thumbnail: thumbnail,
+                lessDescr: lessDescr,
+                price: price.slice(0, price.indexOf('₽') - 1).replace(' ', ''),
+                count: 1 
+            }]
             )
             setAddCart(true)
+            product.count = 1
         }
         if (addCart) {
             setCartData(cartData.filter(el => el.id !== id))
             setAddCart(false)
+            product.count = 0
         }
         
     }
@@ -95,7 +97,7 @@ export default function ProductBox({product}) {
             <p>{price}</p>
         </div>
         <div className="product-buttons">
-            <a className='product-button link-button' href={`/catalog/${product.catalogEn}/${id}/${title}`}>Подробнее</a>
+            <Link className='product-button link-button' to={`/catalog/${product.catalogEn}/${id}/${title}`}>Подробнее</Link>
             <button className='product-button shop-button' onClick={addToCart} >{!addCart ? 'В корзину': 'Доб. в карзину'}</button>
         </div>
     </div>
