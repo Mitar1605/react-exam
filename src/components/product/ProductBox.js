@@ -1,11 +1,12 @@
-import React, { useContext, useEffect, useReducer, useState} from 'react'
+import React, { memo, useContext, useEffect, useReducer, useState} from 'react'
 import { Link } from 'react-router-dom'
 import { CartDataContext } from '../../App'
+import { productsData } from '../../assets/data/productsData'
 import emptyStar from '../../assets/icons/empty_star.png'
 import star from '../../assets/icons/star.png'
 import './ProductBox.css'
 
-export default function ProductBox({product}) {
+export default memo (function ProductBox({product}) {
 
     const {cartData, setCartData} = useContext(CartDataContext)
     
@@ -18,6 +19,7 @@ export default function ProductBox({product}) {
         product.rating = starRatingState
     }, [starRatingState])
 
+    console.log(productsData);
     const [addCart, setAddCart] = useState(count > 0)
 
     const initialImageState = {
@@ -73,6 +75,7 @@ export default function ProductBox({product}) {
                 title: title,
                 thumbnail: thumbnail,
                 lessDescr: lessDescr,
+                rating: rating,
                 price: price.slice(0, price.indexOf('₽') - 1).replace(' ', ''),
                 count: 1 
             }]
@@ -132,4 +135,7 @@ export default function ProductBox({product}) {
         </div>
     </div>
   )
-}
+}, (prevProps, nextProps) => {
+    if (JSON.stringify(prevProps) !== JSON.stringify(nextProps)) return false
+    else return true
+})

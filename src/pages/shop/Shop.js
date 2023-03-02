@@ -1,9 +1,9 @@
-import React, {useContext, useState} from 'react'
+import React, {memo, useContext, useState} from 'react'
 import './Shop.css'
 import { CartDataContext } from '../../App'
 import CartItem from '../../components/cart-item/CartItem'
 
-export default function Shop({showCallFunc}) {
+export default memo( function Shop({showCallFunc}) {
 
     const {cartData, setCartData} = useContext(CartDataContext)
     const [itogo, setItogo] = useState(0)
@@ -61,4 +61,7 @@ export default function Shop({showCallFunc}) {
         </div>
     </div>
   )
-}
+}, (prevProps, nextProps) => {
+    if (JSON.stringify(prevProps) !== JSON.stringify(nextProps)) return false
+    return true
+})

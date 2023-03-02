@@ -1,12 +1,12 @@
-import React, {useContext, useState, useReducer, useEffect} from 'react'
+import React, {useContext, useState, useReducer, useEffect, memo} from 'react'
 import './CatalogProductPage.css'
 import { CartDataContext } from '../../../App'
 import { productsData } from '../../../assets/data/productsData'
-import { Link, useParams, useLocation } from 'react-router-dom'
+import { Link, useParams, useLocation, json } from 'react-router-dom'
 import ProductBox from '../../../components/product/ProductBox'
 
 
-export default function CatalogProductPage() {
+export default memo(function CatalogProductPage() {
     const {pathname} = useLocation()
 
     const topProducts = []
@@ -15,7 +15,7 @@ export default function CatalogProductPage() {
         for (let i = 0; i < 3; i++) {
             
             let maxRatingProduct = {id: -1, rating: -1}
-    
+        
             productsData.forEach((product) => {
                 if (product.rating >= maxRatingProduct.rating) {
                     if (topProducts.some(topProduct => product.id === topProduct.id) === false) {
@@ -23,14 +23,14 @@ export default function CatalogProductPage() {
                     }
                 }
             })
-    
+        
             if (!topProducts.find(el => el.id === maxRatingProduct.id)) {
                 topProducts.push(maxRatingProduct)
             }
-    
+        
         }
     }
-
+    console.log('rendered');
 
     const {cartData, setCartData} = useContext(CartDataContext)
     const {productId} = useParams()
@@ -105,6 +105,8 @@ export default function CatalogProductPage() {
         }
     }
 
+    console.log(productsData);
+
   return (
       <div className='product-page__main'>
           <div className="product-page__product">
@@ -164,4 +166,7 @@ export default function CatalogProductPage() {
           </div>
       </div>
   )
-}
+}, (prevProps, nextprops) => {
+    if (JSON.stringify(prevProps) !== JSON.stringify(nextprops)) return false
+    else return true
+})
