@@ -7,8 +7,30 @@ import ProductBox from '../../../components/product/ProductBox'
 
 
 export default function CatalogProductPage() {
-
     const {pathname} = useLocation()
+
+    const topProducts = []
+
+    if (topProducts.length === 0) {
+        for (let i = 0; i < 3; i++) {
+            
+            let maxRatingProduct = productsData[0].rating !== 0 ? {id: -1, rating: -1}: productsData[0] 
+    
+            productsData.forEach((product) => {
+                if (product.rating >= maxRatingProduct.rating) {
+                    if (topProducts.some(topProduct => product.id === topProduct.id) === false) {
+                        maxRatingProduct = product
+                    }
+                }
+            })
+    
+            if (!topProducts.find(el => el.id === maxRatingProduct.id)) {
+                topProducts.push(maxRatingProduct)
+            }
+    
+        }
+    }
+
 
     const {cartData, setCartData} = useContext(CartDataContext)
     const {productId} = useParams()
@@ -81,7 +103,6 @@ export default function CatalogProductPage() {
             setAddCart(false)
             productsData.find(el => el.id === +productId).count = 0
         }
-        
     }
 
   return (
@@ -131,7 +152,7 @@ export default function CatalogProductPage() {
               </div>
               <div className="top-product-block-products">
                 {
-                    productsData.filter(product => product.top).map(product => {
+                    topProducts.map(product => {
                         return (
                             <div key={product.id}>
                                 <ProductBox product={product} />

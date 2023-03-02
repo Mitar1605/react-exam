@@ -74,6 +74,9 @@
   }
 }
 .product-box .product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px 0;
 }
 .product-box .product-price p {
@@ -88,6 +91,13 @@
   .product-box .product-price p {
     font-size: 16px;
   }
+}
+.product-box .product_rating {
+  display: flex;
+  cursor: pointer;
+}
+.product-box .product_rating img {
+  padding: 0 5px;
 }
 .product-box .product-buttons {
   display: flex;

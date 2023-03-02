@@ -14,12 +14,15 @@ import RecipesPage from './pages/recipesPage/RecipesPage';
 import Shop from './pages/shop/Shop';
 import ScrollToTop from './hooks/scrollToTop/ScrollToTop';
 import Call from './components/call/Call';
+import { productsData } from './assets/data/productsData';
 import { createContext } from 'react';
 
 
 export const CartDataContext = createContext()
 
 function App() {
+
+  productsData.forEach(el => el.rating = 0)
 
   const [cartData, setCartData] = useState([])
   const [showCall, setShowCall] = useState(false)

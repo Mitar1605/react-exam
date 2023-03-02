@@ -1,13 +1,23 @@
 import React, { useContext, useEffect, useReducer, useState} from 'react'
 import { Link } from 'react-router-dom'
 import { CartDataContext } from '../../App'
+import emptyStar from '../../assets/icons/empty_star.png'
+import star from '../../assets/icons/star.png'
 import './ProductBox.css'
 
 export default function ProductBox({product}) {
 
     const {cartData, setCartData} = useContext(CartDataContext)
+    
+    const {id, title, lessDescr, price, rating, catalogEn, thumbnail, count} = product
+    
+    const [starState, setStarState] = useState(rating)
+    const [starRatingState, setStarRatingState] = useState(rating)
 
-    const {id, title, lessDescr, price, catalogEn, thumbnail, count} = product
+    useEffect(() => {
+        product.rating = starRatingState
+    }, [starRatingState])
+
     const [addCart, setAddCart] = useState(count > 0)
 
     const initialImageState = {
@@ -95,6 +105,26 @@ export default function ProductBox({product}) {
         </div>
         <div className="product-price">
             <p>{price}</p>
+            <div className="product_rating" onMouseLeave={() => setStarState(starRatingState)}>
+                {
+                    new Array(5).fill('').map((el, i) => {
+                        
+                        return (
+                            <div key={i}>
+                                <img 
+                                    src={starState > i ? star: emptyStar} 
+                                    alt="star" 
+
+                                    onMouseEnter={() => setStarState(i + 1)} 
+
+                                    onClick={() => setStarRatingState(starState)} 
+                                />
+                            </div>
+                        )
+                    })
+                }
+                <p>{starRatingState}</p>
+            </div>
         </div>
         <div className="product-buttons">
             <Link className='product-button link-button' to={`/catalog/${product.catalogEn}/${id}/${title}`}>Подробнее</Link>
