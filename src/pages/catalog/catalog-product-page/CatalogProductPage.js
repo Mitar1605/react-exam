@@ -14,7 +14,7 @@ export default function CatalogProductPage() {
     if (topProducts.length === 0) {
         for (let i = 0; i < 3; i++) {
             
-            let maxRatingProduct = productsData[0].rating !== 0 ? {id: -1, rating: -1}: productsData[0] 
+            let maxRatingProduct = {id: -1, rating: -1}
     
             productsData.forEach((product) => {
                 if (product.rating >= maxRatingProduct.rating) {
